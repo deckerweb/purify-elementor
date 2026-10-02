@@ -3,7 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 if ( ! class_exists( 'DDW_Purify_Elementor', false ) ) {
 final class DDW_Purify_Elementor {
-    const VERSION = '1.0.0';
+    const VERSION = '1.0.1';
     const OPTION = 'ddw_purify_elementor';
     private $snippet;
     public function __construct( $snippet = false ) {
@@ -285,7 +285,7 @@ JS;
             'show_account' => self::text( 'Show the Elementor account submenu (also useful with Free)', 'Elementor-Konto-Untermenü anzeigen (auch mit Free nützlich)' ),
             'show_mcp' => self::text( 'Show the Elementor MCP submenu (free basic capabilities)', 'Elementor-MCP-Untermenü anzeigen (kostenlose Grundfunktionen)' ),
         );
-        echo '<div class="wrap"><h1>Purify Elementor</h1><p>' . esc_html( self::text( 'A calmer Elementor workspace. Existing content and stored Elementor preferences remain intact.', 'Eine ruhigere Elementor-Oberfläche. Vorhandene Inhalte und gespeicherte Elementor-Einstellungen bleiben erhalten.' ) ) . '</p>';
+        echo '<div class="wrap ddw-pe-root"><header class="ddw-pe-header"><img class="ddw-pe-icon" src="' . esc_url( plugins_url( 'assets/artwork/icon-' . ( 0 === strpos( get_user_locale(), 'de' ) ? 'de' : 'en' ) . '.svg', DDW_PE_PLUGIN_FILE ) ) . '" alt="" width="64" height="64"><div><h1>Purify Elementor</h1><p>' . esc_html( self::text( 'A calmer Elementor workspace. Existing content and stored Elementor preferences remain intact.', 'Eine ruhigere Elementor-Oberfläche. Vorhandene Inhalte und gespeicherte Elementor-Einstellungen bleiben erhalten.' ) ) . '</p></div></header>';
         if ( ! $this->active() ) { echo '<p>' . esc_html( self::text( 'Elementor is currently inactive. Cleanup will start when it is active.', 'Elementor ist derzeit inaktiv. Die Bereinigung greift, sobald es aktiv ist.' ) ) . '</p>'; }
         echo '<form action="options.php" method="post">';
         settings_fields( 'ddw_purify_elementor' );
@@ -295,7 +295,7 @@ JS;
         echo '<p>' . esc_html( self::text( 'Hiding Account or MCP only removes the admin submenu. Connections and services stay intact.', 'Das Ausblenden von Konto oder MCP entfernt nur das Admin-Untermenü. Verbindungen und Dienste bleiben erhalten.' ) ) . '</p>';
         submit_button();
         echo '</form><p>' . esc_html( self::text( 'V4 promotional surfaces and third-party offers are not fully covered in this first version. No license or error notices are globally suppressed.', 'V4-Werbeflächen und Angebote von Drittanbietern werden in dieser ersten Version nicht vollständig abgedeckt. Lizenz- und Fehlermeldungen werden nicht pauschal unterdrückt.' ) ) . '</p>';
-        echo '<p>deckerweb · ' . esc_html( self::VERSION ) . ' · <button type="button" class="button-link" id="ddw-pe-history" aria-controls="ddw-pe-dialog" aria-haspopup="dialog">' . esc_html( self::text( 'Changelog', 'Änderungsverlauf' ) ) . '</button></p>';
+        echo '<footer class="ddw-pe-footer" aria-label="' . esc_attr( self::text( 'Plugin information', 'Plugininformationen' ) ) . '"><div><strong>Purify Elementor</strong> · ' . esc_html( self::text( 'Version', 'Version' ) ) . ' ' . esc_html( self::VERSION ) . ' · <button type="button" class="button-link" id="ddw-pe-history" aria-controls="ddw-pe-dialog" aria-haspopup="dialog">' . esc_html( self::text( 'Changelog', 'Änderungsverlauf' ) ) . '</button> · <a href="https://github.com/deckerweb/purify-elementor/blob/main/' . ( 0 === strpos( get_user_locale(), 'de' ) ? 'README.de.md' : 'README.md' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( self::text( 'Documentation', 'Dokumentation' ) ) . '</a><p>' . esc_html( self::text( 'A calmer Elementor workspace.', 'Eine ruhigere Elementor-Oberfläche.' ) ) . '</p></div><div><span>© 2026 <a href="https://github.com/deckerweb" target="_blank" rel="noopener noreferrer">David Decker – DECKERWEB</a></span><a href="https://github.com/deckerweb/purify-elementor" target="_blank" rel="noopener noreferrer">' . esc_html( self::text( 'Plugin website', 'Plugin-Website' ) ) . '</a></div></footer>';
         // hidden + a scoped rule protect the closed state against global admin styles.
         echo '<style>#ddw-pe-dialog[hidden],#ddw-pe-dialog:not([open]){display:none!important}</style>';
         echo '<dialog hidden id="ddw-pe-dialog" aria-labelledby="ddw-pe-dialog-title"><header class="ddw-pe-dialog-header"><h2 id="ddw-pe-dialog-title">' . esc_html( self::text( 'Changelog', 'Änderungsverlauf' ) ) . '</h2><button type="button" class="button" id="ddw-pe-dialog-close" autofocus>' . esc_html( self::text( 'Close', 'Schließen' ) ) . '</button></header>';
