@@ -4,6 +4,8 @@
 
 Ein kleines Plugin von deckerweb für eine ruhigere Elementor-Oberfläche. Die erste Version bereinigt konkret geprüfte Werbeflächen. Elementor-Inhalte, registrierte Widgets und gespeicherte Elementor-Einstellungen werden nicht verändert.
 
+[Aktuelles Plugin-ZIP herunterladen](https://github.com/deckerweb/purify-elementor/releases/latest) · [Releases](https://github.com/deckerweb/purify-elementor/releases)
+
 ## Installation als Plugin
 
 ZIP über **Plugins → Neues Plugin hinzufügen → Plugin hochladen** installieren und aktivieren. Unter **Einstellungen → Purify Elementor** stehen acht Schalter zur Verfügung. Das Plugin bleibt bei inaktivem Elementor wirkungslos; seine Einstellungen sind weiterhin erreichbar. Voraussetzung: WordPress 6.7+, PHP 7.4+. Die Bereinigungsregeln wurden am veröffentlichten Elementor-Paket 4.3.3 geprüft. Ältere oder spätere Versionen sind nicht als unterstützt getestet.
