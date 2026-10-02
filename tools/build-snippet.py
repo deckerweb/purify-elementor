@@ -5,7 +5,7 @@ root = Path(__file__).resolve().parents[1]
 core = (root / 'includes/core.php').read_text()
 assert core.startswith('<?php\n')
 header = '''<?php
-/** Purify Elementor 1.0.0 – generated standalone snippet.
+/** Purify Elementor 1.0.1 – generated standalone snippet.
  * Author: David Decker – DECKERWEB. License: GPL-2.0-or-later.
  * Generated from includes/core.php; do not maintain a separate cleanup engine.
  * Run everywhere, not admin-only (Elementor editor/AJAX need the same preferences).
