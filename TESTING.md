@@ -38,3 +38,7 @@ Artwork selection: concept 02 Focus approved by the user, bundled under assets/a
 ## 1.0.0 release
 
 Owner-reported verification / Nutzerprüfung: the owner confirmed the desired behavior on their installation before authorizing public publication. No independent full Pro or multisite integration claim. Repository and Update URI are now configured for the public GitHub release. An actual upgrade to a later release still needs a future-version test.
+
+## 1.0.1
+
+Reduced admin header with localized selected icon; reference-aligned footer and localized README banners. Shared cleanup regression checks passed. Isolated DE/EN browser preview verifies loaded artwork, footer links and accessible changelog; this is not a live WordPress styling test.

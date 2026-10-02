@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/deckerweb/purify-elementor
  * Update URI: https://github.com/deckerweb/purify-elementor
  * Description: Targeted Elementor advertising cleanup with optional AI, news and locked widget controls.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: David Decker – DECKERWEB
  * Author URI: https://deckerweb.de/
  * License: GPL-2.0-or-later

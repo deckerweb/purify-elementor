@@ -1,6 +1,8 @@
+![Purify Elementor](assets/artwork/banner-de.png)
+
 # Purify Elementor
 
-[English](README.md) · Version 1.0.0 · 2. Oktober 2026
+[English](README.md) · Version 1.0.1 · 2. Oktober 2026
 
 Ein kleines Plugin von deckerweb für eine ruhigere Elementor-Oberfläche. Die erste Version bereinigt konkret geprüfte Werbeflächen. Elementor-Inhalte, registrierte Widgets und gespeicherte Elementor-Einstellungen werden nicht verändert.
 
@@ -89,6 +91,13 @@ Diese Regeln sind an der Struktur von Elementor 4.3.3 ausgerichtet. Andere Versi
 
 ## Änderungsverlauf
 
+### 1.0.1 – 2. Oktober 2026
+
+- **Behoben:** Ausgewähltes Plugin-Icon im reduzierten Admin-Header und sprachgerechtes Banner in der GitHub-README anzeigen.
+- **Verbessert:** Footer an deckerweb angleichen: Pluginname, Version, zugänglicher lokaler Änderungsverlauf, Dokumentation, Autor und Plugin-Website.
+- **Sonstiges:** Kompakte Purify-Einstellungsseite beibehalten; Snippet aus gemeinsamer Engine neu erzeugen und visuelle Release-Prüfungen dokumentieren.
+
+
 ### 1.0.0 – 2. Oktober 2026
 
 - **Neu:** Erste öffentliche stabile GitHub-Version mit installierbarem Plugin-ZIP und erzeugtem eigenständigem Snippet.
@@ -140,3 +149,7 @@ Diese Regeln sind an der Struktur von Elementor 4.3.3 ausgerichtet. Andere Versi
 - **Sonstiges:** Quellcodeprüfung an Elementor 4.3.3, Syntax- und isolierte Hookprüfungen; Live-Integration noch offen.
 
 Lizenz: GPL-2.0-or-later. Autor: David Decker – DECKERWEB.
+
+## Admin-Gestaltung
+
+Die Purify-Einstellungsseite bleibt bewusst kompakt: ausgewähltes sprachgerechtes Icon, Pluginname und kurze Beschreibung; gemeinsamer deckerweb-Footer mit Version, lokalem Änderungsverlauf, Dokumentation, Autor und Plugin-Website. Das Banner gehört in die GitHub-README, nicht auf die Einstellungsseite. Snippet-Installationen besitzen keine Einstellungsseite und keinen Header/Footer.

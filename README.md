@@ -1,6 +1,8 @@
+![Purify Elementor](assets/artwork/banner-en.png)
+
 # Purify Elementor
 
-[Deutsch](README.de.md) · Version 1.0.0 · October 2, 2026
+[Deutsch](README.de.md) · Version 1.0.1 · October 2, 2026
 
 A small deckerweb plugin for a calmer Elementor workspace. This first version targets audited advertising surfaces without changing Elementor content, widget registration or stored Elementor preferences.
 
@@ -89,6 +91,13 @@ These rules target Elementor 4.3.3 structures. Other versions may differ. The ow
 
 ## Changelog
 
+### 1.0.1 – October 2, 2026
+
+- **Fixed:** Display the selected plugin icon in the reduced admin header and localized banner in the GitHub README.
+- **Improved:** Align the footer with deckerweb: plugin identity, version, accessible local changelog, documentation, author and plugin website.
+- **Misc:** Keep the compact Purify settings page; regenerate the shared-core snippet and document visual release checks.
+
+
 ### 1.0.0 – October 2, 2026
 
 - **New:** First public stable release on GitHub with installable plugin ZIP and generated standalone snippet.
@@ -140,3 +149,7 @@ These rules target Elementor 4.3.3 structures. Other versions may differ. The ow
 - **Misc:** Elementor 4.3.3 source audit, syntax and isolated hook checks; live integration pending.
 
 License: GPL-2.0-or-later. Author: David Decker – DECKERWEB.
+
+## Admin design
+
+The Purify settings page deliberately stays compact: selected localized icon, plugin title and short description; a shared deckerweb footer with version, local changelog, documentation, author and plugin website. The banner belongs in the GitHub README, not the settings page. Snippet installations have no settings page or header/footer.

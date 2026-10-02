@@ -1,3 +1,7 @@
+= 1.0.1 · 2. Oktober 2026 =
+* Behoben: Ausgewähltes Plugin-Icon im reduzierten Admin-Header und sprachgerechtes Banner in der GitHub-README anzeigen.
+* Verbessert: Footer an deckerweb angleichen: Pluginname, Version, zugänglicher lokaler Änderungsverlauf, Dokumentation, Autor und Plugin-Website.
+* Sonstiges: Kompakte Purify-Einstellungsseite beibehalten; Snippet aus gemeinsamer Engine neu erzeugen und visuelle Release-Prüfungen dokumentieren.
 = 1.0.0 · 2. Oktober 2026 =
 * Neu: Erste öffentliche stabile GitHub-Version mit installierbarem Plugin-ZIP und erzeugtem eigenständigem Snippet.
 * Verbessert: Gebündelten GitHub Release Updater V2 für deckerweb/purify-elementor aktivieren; ausgewählte Fokus-Grafiken in Deutsch und Englisch enthalten.

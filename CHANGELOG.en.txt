@@ -1,3 +1,7 @@
+= 1.0.1 · October 2, 2026 =
+* Fixed: Display the selected plugin icon in the reduced admin header and localized banner in the GitHub README.
+* Improved: Align the footer with deckerweb: plugin identity, version, accessible local changelog, documentation, author and plugin website.
+* Misc: Keep the compact Purify settings page; regenerate the shared-core snippet and document visual release checks.
 = 1.0.0 · October 2, 2026 =
 * New: First public stable release on GitHub with installable plugin ZIP and generated standalone snippet.
 * Improved: Activate the bundled GitHub Release Updater V2 for deckerweb/purify-elementor; include selected Focus artwork in German and English.
