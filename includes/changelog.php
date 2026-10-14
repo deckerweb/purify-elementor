@@ -2,6 +2,14 @@
 /** The same categorized entries as the bilingual README files. */
 defined( 'ABSPATH' ) || exit;
 require_once __DIR__ . '/deckerweb-changelog-v1.php';
+/**
+ * Render escaped local release entries in the current host language.
+ * @return string Structured accessible changelog HTML.
+ */
+/**
+ * Render escaped local release entries in the current host language.
+ * @return string Structured accessible changelog HTML.
+ */
 function ddw_pe_changelog_html() {
     $language = 0 === strpos( get_user_locale(), 'de' ) ? 'de' : 'en';
     $path = dirname( __DIR__ ) . '/CHANGELOG.' . $language . '.txt';

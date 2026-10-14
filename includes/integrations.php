@@ -2,9 +2,21 @@
 /** Bundled deckerweb integrations; the snippet deliberately remains standalone. */
 defined( 'ABSPATH' ) || exit;
 require_once __DIR__ . '/deckerweb-plugin-library/bootstrap.php';
-deckerweb_library_register( DDW_PE_PLUGIN_FILE, array(), __DIR__ . '/deckerweb-plugin-library' );
+deckerweb_library_register_v2( DDW_PE_PLUGIN_FILE, array(), __DIR__ . '/deckerweb-plugin-library' );
+/** Initialize this host's guarded public release updater. @return void */
+/** Initialize this host's guarded public release updater. @return void */
 add_action( 'init', static function () {
     // Public release repository; the matching Update URI prevents accidental mismatches.
+    /**
+     * Filter the public update repository, which must match the plugin Update URI.
+     * @since 1.0.0
+     * @param string $repository Repository URL; return an approved public deckerweb URL.
+     */
+    /**
+     * Filter the public update repository, which must match the plugin Update URI.
+     * @since 1.0.0
+     * @param string $repository Repository URL; return an approved public deckerweb URL.
+     */
     $repository = apply_filters( 'deckerweb/purify_elementor/update_repository', 'https://github.com/deckerweb/purify-elementor' );
     if ( ! is_string( $repository ) || ! preg_match( '~^https://github\.com/deckerweb/[A-Za-z0-9._-]+/?$~D', $repository ) ) { return; }
     $headers = get_file_data( DDW_PE_PLUGIN_FILE, array( 'update_uri' => 'Update URI' ) );
@@ -12,6 +24,7 @@ add_action( 'init', static function () {
     if ( ! class_exists( '\Deckerweb\GitHubReleaseUpdater\V2\Updater' ) ) {
         require_once __DIR__ . '/deckerweb-github-release-updater-v2.php';
     }
+    if ( ! defined( '\Deckerweb\GitHubReleaseUpdater\V2\Updater::SUPPORTS_HOST_TRANSLATIONS' ) ) { $GLOBALS['ddw_pe_updater_unavailable'] = true; return; }
     $language = 0 === strpos( get_user_locale(), 'de' ) ? 'de' : 'en';
     // Selected artwork: concept 02, Focus; localized bundled PNG/SVG assets.
     $base = 'assets/artwork/';
@@ -26,9 +39,21 @@ add_action( 'init', static function () {
             'high' => plugins_url( $base . 'banner-' . $language . '.png', DDW_PE_PLUGIN_FILE ),
         ),
     );
+    /**
+     * Filter localized update-dialog artwork URLs.
+     * @since 0.2.0
+     * @param array $artwork Icons and banners; return the modified maps.
+     * @param string $language Selected artwork language, de or en.
+     */
+    /**
+     * Filter localized update-dialog artwork URLs.
+     * @since 0.2.0
+     * @param array $artwork Icons and banners; return the modified maps.
+     * @param string $language Selected artwork language, de or en.
+     */
     $artwork = apply_filters( 'deckerweb/purify_elementor/update_artwork', $artwork, $language );
     try {
-        $updater = new \Deckerweb\GitHubReleaseUpdater\V2\Updater( DDW_PE_PLUGIN_FILE, $repository, 'Purify Elementor', DDW_Purify_Elementor::text( 'A calmer Elementor workspace.', 'Eine ruhigere Elementor-Oberfläche.' ), is_array( $artwork ) ? $artwork : array() );
+        $updater = new \Deckerweb\GitHubReleaseUpdater\V2\Updater( DDW_PE_PLUGIN_FILE, $repository, 'Purify Elementor', DDW_Purify_Elementor::text( 'A calmer Elementor workspace.', 'Eine ruhigere Elementor-Oberfläche.' ), is_array( $artwork ) ? $artwork : array(), array( 'translate' => require __DIR__ . '/updater-translations.php' ) );
         $updater->register();
     } catch ( \InvalidArgumentException $error ) { return; }
 } );

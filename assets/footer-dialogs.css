@@ -1,0 +1,4 @@
+/* Scope closed-state protection to these two footer dialogs only. */
+html body #ddw-pe-dialog[hidden],html body #ddw-pe-dialog:not([open]),
+html body #dwl-history[hidden],html body #dwl-history:not([open]){display:none!important}
+#ddw-pe-dialog .ddw-pe-dialog-header form{margin:0}

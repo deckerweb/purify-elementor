@@ -1,0 +1,47 @@
+# Änderungsverlauf
+
+## 1.1.0 · 14. Oktober 2026
+
+- **Neu:** Kompakter Kompatibilitätsstatus zeigt erkannte Elementor-Versionen und aktive oder pausierte Bereinigung.
+- **Verbessert:** Geprüfte Angie-Installationswerbung, leere Custom-Widget-Werbung, Struktur-Upsells und MCP-Upgrade-Werbung werden ausgeblendet; nutzbare Widgets und MCP-Funktionen bleiben erhalten.
+- **Verbessert:** Unterstützt die geprüften Elementor-Free-Versionen 4.3.4 und 4.3.5 zusätzlich zu 4.3.3 und enthält deckerweb Library 0.9.0.
+- **Verbessert:** Sprachgerechte Fokus-Grafiken verwenden IBM Plex Sans als eigenständige Vektorkonturen.
+- **Behoben:** Admin-Hinweise bleiben unterhalb des vollständigen Headers; Speichern erzeugt genau eine Bestätigung.
+- **Behoben:** Gezielte Formular-Kompatibilität vermeidet den Elementor-Trackingfehler auf der Purify-Einstellungsseite.
+- **Behoben:** Editor-Bereinigung pausiert bei ungeprüften Elementor-Versionen.
+- **Behoben:** Footer-Dialoge bleiben trotz globaler Fremdstyles geschlossen und verwenden abgegrenzte Bedienelemente, natives Schließen und Fokusrückgabe. Der Plugin-Änderungsverlauf bleibt bei nicht verfügbarem Dialog direkt verlinkt.
+
+## 1.0.1 · 2. Oktober 2026
+
+- **Verbessert:** Kompakter deckerweb-Footer mit Version, Änderungsverlauf, Dokumentation und Autorenlinks.
+- **Behoben:** Ausgewähltes Icon im Admin-Header und sprachgerechte Banner in beiden READMEs sichtbar.
+
+## 1.0.0 · 2. Oktober 2026
+
+- **Neu:** Erste öffentliche stabile Version mit Plugin-ZIP und optionalem eigenständigem Snippet.
+- **Verbessert:** GitHub-Release-Updates und sprachgerechte Grafiken.
+
+## 0.3.0 · 2. Oktober 2026
+
+- **Neu:** Direkte Admin-Links für Templates, neues Template, Einstellungen und Element-Manager.
+- **Verbessert:** Pro-Navigation in Free ausblenden; Konto- und MCP-Einstellungen auch in der internen Seitenleiste anwenden.
+- **Behoben:** Oberen Upgrade-Button ausblenden.
+
+## 0.2.2 · 2. Oktober 2026
+
+- **Neu:** Theme-Builder- und globale Widget-Werbung in Free ausblenden; globale Farben und Schriften erhalten.
+- **Behoben:** Leere Pro-Kategorie zusammen mit Werbe-Widgets ausblenden.
+
+## 0.2.1 · 2. Oktober 2026
+
+- **Behoben:** Home-URLs erkennen und spät registrierte Upgrade-Einträge entfernen.
+
+## 0.2.0 · 2. Oktober 2026
+
+- **Neu:** Separate Einstellungen für Home, Konto, MCP und Dashboard-Widget; eingebettete deckerweb Library.
+- **Behoben:** Zuverlässiges Schließen des Änderungsverlaufs mit Escape und Fokusrückgabe.
+
+## 0.1.0 · 2. Oktober 2026
+
+- **Neu:** Gezielte Bereinigung von Admin und V3-Editor mit optionalen Widget-, AI- und News-Einstellungen.
+

@@ -1,0 +1,47 @@
+# Changelog
+
+## 1.1.0 · October 14, 2026
+
+- **New:** Compact compatibility status shows detected Elementor versions and whether cleanup is active or paused.
+- **Improved:** Hides audited Angie installation promotions, empty Custom Widget advertising, Structure upsells and MCP upgrade advertising while retaining usable widgets and MCP features.
+- **Improved:** Supports audited Elementor Free 4.3.4 and 4.3.5 alongside 4.3.3 and includes deckerweb Library 0.9.0.
+- **Improved:** Localized Focus artwork uses IBM Plex Sans with self-contained vector outlines.
+- **Fixed:** Admin notices remain below the complete header; saving produces one confirmation.
+- **Fixed:** Scoped form compatibility avoids the Elementor dashboard-tracking error on the Purify settings page.
+- **Fixed:** Editor cleanup pauses for unreviewed Elementor versions.
+- **Fixed:** Footer dialogs remain closed under conflicting global styles and use isolated controls, native closing and keyboard focus return. The plugin changelog retains a direct link if its dialog is unavailable.
+
+## 1.0.1 · October 2, 2026
+
+- **Improved:** Compact deckerweb footer with version, changelog, documentation and author links.
+- **Fixed:** Selected icon displayed in the admin header and localized banners displayed in both READMEs.
+
+## 1.0.0 · October 2, 2026
+
+- **New:** First public stable release with plugin ZIP and optional standalone snippet.
+- **Improved:** GitHub release updates and localized artwork.
+
+## 0.3.0 · October 2, 2026
+
+- **New:** Direct admin links for Templates, Add New Template, Settings and Element Manager.
+- **Improved:** Hide Pro-only navigation in Free; apply Account and MCP preferences to the internal sidebar.
+- **Fixed:** Hide the top Upgrade button.
+
+## 0.2.2 · October 2, 2026
+
+- **New:** Hide Theme Builder and Global Widgets promotions in Free; preserve global colors and fonts.
+- **Fixed:** Hide the empty Pro category with promotional widgets.
+
+## 0.2.1 · October 2, 2026
+
+- **Fixed:** Recognize Home URLs and remove late-registered Upgrade entries.
+
+## 0.2.0 · October 2, 2026
+
+- **New:** Independent Home, Account, MCP and dashboard-widget preferences; embedded deckerweb Library.
+- **Fixed:** Reliable changelog close, Escape and focus handling.
+
+## 0.1.0 · October 2, 2026
+
+- **New:** Targeted administration and V3-editor cleanup with optional widget, AI and news controls.
+

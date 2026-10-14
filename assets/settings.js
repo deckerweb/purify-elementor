@@ -1,23 +1,21 @@
-/* Keep the native dialog's focus trap; guard against globally styled dialogs. */
+/* Scoped compatibility for the native WordPress settings form. */
 (() => {
     'use strict';
-    const init = () => {
-        const trigger = document.getElementById('ddw-pe-history');
-        const dialog = document.getElementById('ddw-pe-dialog');
-        const close = document.getElementById('ddw-pe-dialog-close');
-        if (!trigger || !dialog || !close) return;
-        dialog.hidden = true;
-        trigger.addEventListener('click', () => {
-            if (typeof dialog.showModal !== 'function' || dialog.open) return;
-            dialog.hidden = false;
-            dialog.showModal();
-            close.focus();
-        });
-        const dismiss = () => { if (dialog.open) dialog.close(); };
-        close.addEventListener('click', dismiss);
-        dialog.addEventListener('cancel', event => { event.preventDefault(); dismiss(); });
-        dialog.addEventListener('close', () => { dialog.hidden = true; trigger.focus(); });
+    /* Keep the native Settings API fields; relocate only the routing value that
+     * shadows form.action in Elementor 4.3.3–4.3.5 dashboard tracking. No-JS
+     * submissions retain the unmodified WordPress fields and target. */
+    const prepareSettingsForm = () => {
+        const form = document.getElementById('ddw-pe-settings-form');
+        if (!form || form.dataset.ddwPeTrackingWorkaround !== '1' || form.method !== 'post') return;
+        const fields = form.querySelectorAll('input[type="hidden"][name="action"]');
+        if (fields.length !== 1 || fields[0].value !== 'update') return;
+        const target = new URL(form.getAttribute('action'), window.location.href);
+        const nativeTarget = new URL('options.php', window.location.href);
+        if (target.origin !== window.location.origin || target.pathname !== nativeTarget.pathname) return;
+        target.searchParams.set('action', 'update');
+        form.setAttribute('action', target.href);
+        fields[0].remove();
     };
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-    else init();
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', prepareSettingsForm);
+    else prepareSettingsForm();
 })();

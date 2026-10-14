@@ -24,3 +24,11 @@
 .ddw-pe-footer>div:last-child{display:flex;flex-direction:column;gap:6px}
 .ddw-pe-footer .button-link{font:inherit;vertical-align:baseline}
 @media(max-width:480px){.ddw-pe-header{align-items:flex-start;gap:12px}.ddw-pe-icon{width:48px;height:48px}.ddw-pe-header h1{font-size:23px}.ddw-pe-footer{gap:12px}}
+
+.ddw-pe-compatibility{margin:20px 0 24px;padding:14px 16px;border:1px solid #dcdcde;border-radius:6px;background:#fff}
+.ddw-pe-compatibility h2{font-size:14px;margin:0 0 10px}
+.ddw-pe-compatibility dl{display:flex;flex-wrap:wrap;gap:10px 26px;margin:0}
+.ddw-pe-compatibility dl>div{min-width:0}
+.ddw-pe-compatibility dt{font-weight:600}
+.ddw-pe-compatibility dd{margin:3px 0 0;overflow-wrap:anywhere}
+.ddw-pe-compatibility .description{margin:10px 0 0}

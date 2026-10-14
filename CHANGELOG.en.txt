@@ -1,39 +1,27 @@
+= 1.1.0 · October 14, 2026 =
+* New: Compact compatibility status shows detected Elementor versions and whether cleanup is active or paused.
+* Improved: Hides audited Angie installation promotions, empty Custom Widget advertising, Structure upsells and MCP upgrade advertising while retaining usable widgets and MCP features.
+* Improved: Supports audited Elementor Free 4.3.4 and 4.3.5 alongside 4.3.3 and includes deckerweb Library 0.9.0.
+* Improved: Localized Focus artwork uses IBM Plex Sans with self-contained vector outlines.
+* Fixed: Admin notices remain below the complete header; saving produces one confirmation.
+* Fixed: Scoped form compatibility avoids the Elementor dashboard-tracking error on the Purify settings page.
+* Fixed: Editor cleanup pauses for unreviewed Elementor versions.
+* Fixed: Footer dialogs remain closed under conflicting global styles and use isolated controls, native closing and keyboard focus return. The plugin changelog retains a direct link if its dialog is unavailable.
 = 1.0.1 · October 2, 2026 =
-* Fixed: Display the selected plugin icon in the reduced admin header and localized banner in the GitHub README.
-* Improved: Align the footer with deckerweb: plugin identity, version, accessible local changelog, documentation, author and plugin website.
-* Misc: Keep the compact Purify settings page; regenerate the shared-core snippet and document visual release checks.
+* Improved: Compact deckerweb footer with version, changelog, documentation and author links.
+* Fixed: Selected icon displayed in the admin header and localized banners displayed in both READMEs.
 = 1.0.0 · October 2, 2026 =
-* New: First public stable release on GitHub with installable plugin ZIP and generated standalone snippet.
-* Improved: Activate the bundled GitHub Release Updater V2 for deckerweb/purify-elementor; include selected Focus artwork in German and English.
-* Misc: Finalize bilingual documentation and release packaging. The owner confirmed the desired behavior on their installation; Pro and multisite remain unverified.
+* New: First public stable release with plugin ZIP and optional standalone snippet.
+* Improved: GitHub release updates and localized artwork.
 = 0.3.0 · October 2, 2026 =
-* New: Four direct Elementor submenus: Templates, Add New Template, Settings and Element Manager with appropriate WordPress capabilities.
-* Improved: Remove Pro entry points in Free from WordPress admin and the internal Elementor sidebar: Theme Builder, Submissions, Custom Elements and children, and Popups.
-* Fixed: Hide the top Upgrade button using its explicit Elementor selector.
-* Improved: Apply Account and MCP switches to the internal Elementor sidebar too.
-* Misc: Regenerated shared-core snippet; additional navigation and shortcut regression checks.
+* New: Direct admin links for Templates, Add New Template, Settings and Element Manager.
+* Improved: Hide Pro-only navigation in Free; apply Account and MCP preferences to the internal sidebar.
+* Fixed: Hide the top Upgrade button.
 = 0.2.2 · October 2, 2026 =
-* Fixed: Hide the empty Pro widget category in Free when promotional widgets are hidden.
-* New: Hide the Theme Builder menu item and Globals widget tab in Free when cleanup is enabled; preserve global colors and fonts.
-* Misc: Keep these entry points when Elementor Pro is loaded. Dynamic Theme Builder menus are matched using their translated name.
+* New: Hide Theme Builder and Global Widgets promotions in Free; preserve global colors and fonts.
+* Fixed: Hide the empty Pro category with promotional widgets.
 = 0.2.1 · October 2, 2026 =
-* Fixed: Recognize Home and other submenus using admin.php?page=… URLs.
-* Fixed: Suppress Elementor One Upgrade through its own filter and remove late entries again before menu output.
-* Misc: Added regression checks for the actual Home URL and maximum-priority Upgrade registration.
+* Fixed: Recognize Home URLs and remove late-registered Upgrade entries.
 = 0.2.0 · October 2, 2026 =
-* Improved: Bundled artwork concept 2 Focus as the default and prepared localized updater icons and banners.
-* New: Account and MCP submenus remain visible for their free capabilities; separate settings can hide them.
-* New: Home submenu hidden by default; can be restored in settings.
-* New: Dashboard widget switch; the standalone snippet hides the entire Elementor widget by default.
-* New: Bundled deckerweb Library 0.3.0; GitHub Updater V2 prepared for a future repository and currently inactive.
-* New: Three artwork concepts with German and English icons and banners, supplied separately as PNG and SVG.
-* Fixed: Removed the additional red admin_menu_promo Upgrade menu item.
-* Fixed: Explicitly hide the closed changelog dialog; reliable close, Escape, focus handling and mobile layout.
-* Misc: Plugin and snippet generated from the shared engine; all new text and differences documented in German and English.
-= 0.1.0 · October 2, 2026 =
-* New: Standalone plugin with targeted admin and V3 editor cleanup.
-* New: Optional locked V3 panel offers, AI and dashboard news controls.
-* New: German and English settings page with accessible changelog.
-* New: Standalone snippet generated from the shared plugin engine.
-* Misc: Documented plugin/snippet differences and V4, Pro and multisite limits.
-* Misc: Elementor 4.3.3 source audit, syntax and isolated hook checks; live integration pending.
+* New: Independent Home, Account, MCP and dashboard-widget preferences; embedded deckerweb Library.
+* Fixed: Reliable changelog close, Escape and focus handling.

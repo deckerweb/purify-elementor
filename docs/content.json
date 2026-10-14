@@ -1,0 +1,302 @@
+{
+  "history": {
+    "1.1.0": {
+      "date": "2026-10-14",
+      "en": [
+        [
+          "New",
+          "Compact compatibility status shows detected Elementor versions and whether cleanup is active or paused."
+        ],
+        [
+          "Improved",
+          "Hides audited Angie installation promotions, empty Custom Widget advertising, Structure upsells and MCP upgrade advertising while retaining usable widgets and MCP features."
+        ],
+        [
+          "Improved",
+          "Supports audited Elementor Free 4.3.4 and 4.3.5 alongside 4.3.3 and includes deckerweb Library 0.9.0."
+        ],
+        [
+          "Improved",
+          "Localized Focus artwork uses IBM Plex Sans with self-contained vector outlines."
+        ],
+        [
+          "Fixed",
+          "Admin notices remain below the complete header; saving produces one confirmation."
+        ],
+        [
+          "Fixed",
+          "Scoped form compatibility avoids the Elementor dashboard-tracking error on the Purify settings page."
+        ],
+        [
+          "Fixed",
+          "Editor cleanup pauses for unreviewed Elementor versions."
+        ],
+        [
+          "Fixed",
+          "Footer dialogs remain closed under conflicting global styles and use isolated controls, native closing and keyboard focus return. The plugin changelog retains a direct link if its dialog is unavailable."
+        ]
+      ],
+      "de": [
+        [
+          "Neu",
+          "Kompakter Kompatibilitätsstatus zeigt erkannte Elementor-Versionen und aktive oder pausierte Bereinigung."
+        ],
+        [
+          "Verbessert",
+          "Geprüfte Angie-Installationswerbung, leere Custom-Widget-Werbung, Struktur-Upsells und MCP-Upgrade-Werbung werden ausgeblendet; nutzbare Widgets und MCP-Funktionen bleiben erhalten."
+        ],
+        [
+          "Verbessert",
+          "Unterstützt die geprüften Elementor-Free-Versionen 4.3.4 und 4.3.5 zusätzlich zu 4.3.3 und enthält deckerweb Library 0.9.0."
+        ],
+        [
+          "Verbessert",
+          "Sprachgerechte Fokus-Grafiken verwenden IBM Plex Sans als eigenständige Vektorkonturen."
+        ],
+        [
+          "Behoben",
+          "Admin-Hinweise bleiben unterhalb des vollständigen Headers; Speichern erzeugt genau eine Bestätigung."
+        ],
+        [
+          "Behoben",
+          "Gezielte Formular-Kompatibilität vermeidet den Elementor-Trackingfehler auf der Purify-Einstellungsseite."
+        ],
+        [
+          "Behoben",
+          "Editor-Bereinigung pausiert bei ungeprüften Elementor-Versionen."
+        ],
+        [
+          "Behoben",
+          "Footer-Dialoge bleiben trotz globaler Fremdstyles geschlossen und verwenden abgegrenzte Bedienelemente, natives Schließen und Fokusrückgabe. Der Plugin-Änderungsverlauf bleibt bei nicht verfügbarem Dialog direkt verlinkt."
+        ]
+      ]
+    },
+    "1.0.1": {
+      "en": [
+        [
+          "Improved",
+          "Compact deckerweb footer with version, changelog, documentation and author links."
+        ],
+        [
+          "Fixed",
+          "Selected icon displayed in the admin header and localized banners displayed in both READMEs."
+        ]
+      ],
+      "de": [
+        [
+          "Verbessert",
+          "Kompakter deckerweb-Footer mit Version, Änderungsverlauf, Dokumentation und Autorenlinks."
+        ],
+        [
+          "Behoben",
+          "Ausgewähltes Icon im Admin-Header und sprachgerechte Banner in beiden READMEs sichtbar."
+        ]
+      ]
+    },
+    "1.0.0": {
+      "en": [
+        [
+          "New",
+          "First public stable release with plugin ZIP and optional standalone snippet."
+        ],
+        [
+          "Improved",
+          "GitHub release updates and localized artwork."
+        ]
+      ],
+      "de": [
+        [
+          "Neu",
+          "Erste öffentliche stabile Version mit Plugin-ZIP und optionalem eigenständigem Snippet."
+        ],
+        [
+          "Verbessert",
+          "GitHub-Release-Updates und sprachgerechte Grafiken."
+        ]
+      ]
+    },
+    "0.3.0": {
+      "en": [
+        [
+          "New",
+          "Direct admin links for Templates, Add New Template, Settings and Element Manager."
+        ],
+        [
+          "Improved",
+          "Hide Pro-only navigation in Free; apply Account and MCP preferences to the internal sidebar."
+        ],
+        [
+          "Fixed",
+          "Hide the top Upgrade button."
+        ]
+      ],
+      "de": [
+        [
+          "Neu",
+          "Direkte Admin-Links für Templates, neues Template, Einstellungen und Element-Manager."
+        ],
+        [
+          "Verbessert",
+          "Pro-Navigation in Free ausblenden; Konto- und MCP-Einstellungen auch in der internen Seitenleiste anwenden."
+        ],
+        [
+          "Behoben",
+          "Oberen Upgrade-Button ausblenden."
+        ]
+      ]
+    },
+    "0.2.2": {
+      "en": [
+        [
+          "New",
+          "Hide Theme Builder and Global Widgets promotions in Free; preserve global colors and fonts."
+        ],
+        [
+          "Fixed",
+          "Hide the empty Pro category with promotional widgets."
+        ]
+      ],
+      "de": [
+        [
+          "Neu",
+          "Theme-Builder- und globale Widget-Werbung in Free ausblenden; globale Farben und Schriften erhalten."
+        ],
+        [
+          "Behoben",
+          "Leere Pro-Kategorie zusammen mit Werbe-Widgets ausblenden."
+        ]
+      ]
+    },
+    "0.2.1": {
+      "en": [
+        [
+          "Fixed",
+          "Recognize Home URLs and remove late-registered Upgrade entries."
+        ]
+      ],
+      "de": [
+        [
+          "Behoben",
+          "Home-URLs erkennen und spät registrierte Upgrade-Einträge entfernen."
+        ]
+      ]
+    },
+    "0.2.0": {
+      "en": [
+        [
+          "New",
+          "Independent Home, Account, MCP and dashboard-widget preferences; embedded deckerweb Library."
+        ],
+        [
+          "Fixed",
+          "Reliable changelog close, Escape and focus handling."
+        ]
+      ],
+      "de": [
+        [
+          "Neu",
+          "Separate Einstellungen für Home, Konto, MCP und Dashboard-Widget; eingebettete deckerweb Library."
+        ],
+        [
+          "Behoben",
+          "Zuverlässiges Schließen des Änderungsverlaufs mit Escape und Fokusrückgabe."
+        ]
+      ]
+    },
+    "0.1.0": {
+      "en": [
+        [
+          "New",
+          "Targeted administration and V3-editor cleanup with optional widget, AI and news controls."
+        ]
+      ],
+      "de": [
+        [
+          "Neu",
+          "Gezielte Bereinigung von Admin und V3-Editor mit optionalen Widget-, AI- und News-Einstellungen."
+        ]
+      ]
+    }
+  },
+  "languages": {
+    "en": {
+      "about": "A calmer Elementor workspace. Hide audited promotions and simplify navigation while keeping content and stored Elementor preferences intact.",
+      "glance": [
+        "Eight website preferences under Settings → Purify Elementor.",
+        "Home hidden by default; Account and MCP remain available.",
+        "Optional locked-widget, AI, news and dashboard-widget controls.",
+        "Compact localized header, accessible local changelog and documentation links.",
+        "Read-only compatibility status and targeted MCP/Angie promotion cleanup."
+      ],
+      "install": "Upload the plugin ZIP under Plugins → Add New → Upload Plugin. Activate it and open Settings → Purify Elementor. Administrator permissions (manage_options) are required to change preferences. Missing or unaudited Elementor versions pause cleanup; settings remain accessible.",
+      "features": "With Elementor Free, audited Pro-only menu entries and promotional Global Widgets surfaces are hidden. Global colors and fonts remain usable. Pro entry points are retained when Pro is loaded. Direct links open saved Templates, Add New Template, Settings and Element Manager; existing Elementor permissions still apply. With advertising cleanup enabled, audited Angie installation prompts, empty Custom Widget promotions, the Structure upgrade footer and MCP upgrade advertising are hidden. Active Angie tools, populated custom-widget categories and free MCP functions remain available. A compact status shows detected versions and whether cleanup is active, paused or disabled.",
+      "limits": "Cleanup targets audited Elementor 4.3.3, 4.3.4 and 4.3.5 structures. Other versions pause cleanup to preserve functional controls. Atomic/V4 and third-party offers are not fully covered. No global suppression of technical, license, security or update notices. Hiding menus does not disconnect Account or MCP. No performance improvement is guaranteed. Pro 4.3.1 and 4.3.2 received source review and protection tests only; full live Pro compatibility is not established. The form workaround is limited to Purify settings with audited Elementor versions; it does not alter other forms or Elementor tracking globally.",
+      "components": "The plugin embeds deckerweb Library 0.9.0 and GitHub Release Updater 2.1.0. Library runtime requires PHP 8.0; compatible runtime election checks requirements before include. Purify retains its PHP 7.4 minimum. Shared Library preferences and optional online discovery are separate from Purify preferences. No automatic updates or telemetry are enabled.",
+      "privacy": "Release metadata and chosen update ZIPs are requested from GitHub. Optional Library online discovery requests the deckerweb GitHub raw catalog; installation requires release and package validation. Endpoints see the requesting IP. No site URL, user ID or plugin inventory is submitted by the Library. Public use requires no token.",
+      "data": "The eight Purify preferences belong to each website, including in Multisite. Deactivation and uninstall retain them. Uninstall removes the host update cache and invokes the shared Library cleanup contract; another installed host, even inactive, protects shared data. Library settings remain unless its separate deletion option is enabled. Elementor data and installed catalog plugins are retained.",
+      "snippet": "The explicitly authorized standalone snippet uses the same cleanup engine. Run it everywhere in a PHP snippet manager and activate only one variant. Home and the entire dashboard widget are hidden by default. It has code configuration instead of a settings page, and includes neither Library nor updater. Its own German fallback works without plugin language files; load timing depends on the manager.",
+      "faq": [
+        [
+          "Where are the preferences?",
+          "Settings → Purify Elementor, or the Settings link in the plugin list."
+        ],
+        [
+          "Can I keep Home, Account and MCP?",
+          "Yes. Home is initially hidden; Account and MCP are initially shown. Change their independent preferences without disconnecting services."
+        ],
+        [
+          "Does this disable Elementor Pro?",
+          "No. Pro widgets, content and license data are not removed. Audited Pro-only entry points are hidden only in Free."
+        ],
+        [
+          "What happens after deactivation or uninstall?",
+          "Purify preferences and Elementor data remain. Only temporary host/shared component data is cleaned according to ownership."
+        ],
+        [
+          "Does it support every Elementor version and Multisite?",
+          "Cleanup is limited to audited Elementor 4.3.3, 4.3.4 and 4.3.5. Preferences are per site; isolated Multisite checks do not establish full live Pro/network compatibility."
+        ]
+      ]
+    },
+    "de": {
+      "about": "Eine ruhigere Elementor-Oberfläche. Geprüfte Werbung ausblenden und die Navigation vereinfachen; Inhalte und gespeicherte Elementor-Einstellungen bleiben erhalten.",
+      "glance": [
+        "Acht Website-Einstellungen unter Einstellungen → Purify Elementor.",
+        "Home standardmäßig verborgen; Konto und MCP bleiben verfügbar.",
+        "Optionale Schalter für Werbe-Widgets, AI, News und das Dashboard-Widget.",
+        "Kompakter sprachgerechter Header, zugänglicher lokaler Änderungsverlauf und Dokumentationslinks.",
+        "Kompatibilitätsstatus und gezielte Bereinigung von MCP-/Angie-Werbung."
+      ],
+      "install": "Plugin-ZIP unter Plugins → Neues Plugin hinzufügen → Plugin hochladen installieren. Aktivieren und Einstellungen → Purify Elementor öffnen. Änderungen erfordern Administratorrechte (manage_options). Bei fehlendem oder ungeprüftem Elementor pausiert die Bereinigung; Einstellungen bleiben erreichbar.",
+      "features": "Mit Elementor Free werden geprüfte Pro-Menüeinträge und globale Widget-Werbung ausgeblendet. Globale Farben und Schriften bleiben nutzbar. Bei geladenem Pro bleiben Pro-Einstiege erhalten. Direkte Links öffnen gespeicherte Templates, ein neues Template, Einstellungen und Element-Manager; die Elementor-Berechtigungen gelten weiterhin. Bei aktivierter Werbebereinigung werden geprüfte Angie-Installationshinweise, leere Custom-Widget-Werbung, der Struktur-Upgrade-Footer und MCP-Upgrade-Werbung ausgeblendet. Aktive Angie-Werkzeuge, befüllte Custom-Widget-Kategorien und kostenlose MCP-Funktionen bleiben verfügbar. Ein kompakter Status zeigt erkannte Versionen und aktive, pausierte oder ausgeschaltete Bereinigung.",
+      "limits": "Die Bereinigung gilt für geprüfte Elementor-Strukturen aus Version 4.3.3, 4.3.4 und 4.3.5. Bei anderen Versionen pausiert sie zum Schutz funktionaler Bedienelemente. Atomic/V4 und Drittanbieterangebote sind nicht vollständig abgedeckt. Technische, Lizenz-, Sicherheits- und Updatehinweise werden nicht pauschal unterdrückt. Verborgene Menüs trennen keine Konto-/MCP-Verbindung. Kein zugesicherter Performancegewinn. Pro 4.3.1 und 4.3.2 wurden ausschließlich anhand der Quellen und Schutzlogik geprüft; vollständige Live-Pro-Kompatibilität ist damit nicht belegt. Der Formular-Workaround gilt nur auf der Purify-Einstellungsseite mit geprüften Elementor-Versionen; andere Formulare und Elementors globales Tracking bleiben unverändert.",
+      "components": "Das Plugin enthält deckerweb Library 0.9.0 und GitHub Release Updater 2.1.0. Die Library-Laufzeit benötigt PHP 8.0; ihre kompatible Laufzeitwahl prüft Voraussetzungen vor dem Laden. Purify behält PHP 7.4 als Mindestversion. Gemeinsame Library-Einstellungen und optionale Onlineabfragen sind unabhängig von Purify. Keine automatisch aktivierten Updates oder Telemetrie.",
+      "privacy": "Release-Metadaten und ausgewählte Update-ZIPs werden bei GitHub abgefragt. Die optionale Library-Onlineabfrage nutzt den deckerweb-GitHub-Raw-Katalog; Installationen prüfen Release und Paket. Die Endpunkte sehen die anfragende IP-Adresse. Die Library überträgt keine Website-URL, Nutzer-ID oder Pluginliste. Öffentliche Nutzung benötigt keinen Token.",
+      "data": "Die acht Purify-Einstellungen gelten je Website, auch in Multisite. Deaktivierung und Deinstallation erhalten sie. Deinstallation entfernt den Host-Updatecache und ruft die gemeinsame Library-Bereinigung auf; andere installierte Hosts schützen gemeinsame Daten auch bei Deaktivierung. Library-Einstellungen bleiben ohne ihre separate Löschoption erhalten. Elementor-Daten und über den Katalog installierte Plugins bleiben erhalten.",
+      "snippet": "Das ausdrücklich freigegebene eigenständige Snippet nutzt dieselbe Bereinigungsengine. Im PHP-Snippet-Manager überall ausführen und nur eine Variante aktivieren. Home und das gesamte Dashboard-Widget sind standardmäßig verborgen. Konfiguration erfolgt im Code statt auf einer Einstellungsseite; Library und Updater fehlen. Sein deutscher Fallback funktioniert ohne Plugin-Sprachdateien; die Ladezeit hängt vom Manager ab.",
+      "faq": [
+        [
+          "Wo finde ich die Einstellungen?",
+          "Unter Einstellungen → Purify Elementor oder über Einstellungen in der Pluginliste."
+        ],
+        [
+          "Kann ich Home, Konto und MCP behalten?",
+          "Ja. Home ist zunächst verborgen; Konto und MCP werden zunächst angezeigt. Die unabhängigen Schalter ändern keine Verbindung."
+        ],
+        [
+          "Deaktiviert das Elementor Pro?",
+          "Nein. Pro-Widgets, Inhalte und Lizenzdaten bleiben erhalten. Geprüfte Pro-Einstiege werden nur in Free verborgen."
+        ],
+        [
+          "Was passiert bei Deaktivierung oder Deinstallation?",
+          "Purify-Einstellungen und Elementor-Daten bleiben erhalten. Nur temporäre Host-/Komponentendaten werden entsprechend ihrer Zuständigkeit bereinigt."
+        ],
+        [
+          "Werden alle Elementor-Versionen und Multisite unterstützt?",
+          "Die Bereinigung ist auf die geprüften Versionen 4.3.3, 4.3.4 und 4.3.5 begrenzt. Einstellungen gelten je Website; isolierte Multisite-Prüfungen belegen keine vollständige Live-Pro-/Netzwerk-Kompatibilität."
+        ]
+      ]
+    }
+  },
+  "version": "1.1.0"
+}
