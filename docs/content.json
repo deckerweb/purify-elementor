@@ -1,5 +1,44 @@
 {
   "history": {
+    "1.1.1": {
+      "date": "2026-10-21",
+      "en": [
+        [
+          "Improved",
+          "Includes deckerweb Library 1.1.0 and the pinned deckerweb Updater 2.2.1; an older updater loaded by another plugin no longer selects the wrong engine."
+        ],
+        [
+          "Fixed",
+          "Changelog, documentation links and artwork follow the active WordPress interface language."
+        ],
+        [
+          "Fixed",
+          "Paused cleanup preserves saved preferences and rejects changes until a checked Elementor version is active."
+        ],
+        [
+          "Misc",
+          "Requires PHP 8.1 or newer; WordPress 6.7 remains supported. Wiki navigation and bilingual footer are consistent."
+        ]
+      ],
+      "de": [
+        [
+          "Verbessert",
+          "Enthält deckerweb Library 1.1.0 und den fest eingebundenen deckerweb Updater 2.2.1; ein zuvor von einem anderen Plugin geladener älterer Updater bestimmt nicht mehr die verwendete Engine."
+        ],
+        [
+          "Behoben",
+          "Änderungsverlauf, Dokumentationslinks und Grafiken folgen der aktiven WordPress-Oberflächensprache."
+        ],
+        [
+          "Behoben",
+          "Pausierte Bereinigung erhält gespeicherte Einstellungen und lässt Änderungen erst wieder mit einer aktiven geprüften Elementor-Version zu."
+        ],
+        [
+          "Sonstiges",
+          "Benötigt mindestens PHP 8.1; WordPress 6.7 bleibt unterstützt. Wiki-Navigation und zweisprachiger Footer sind vereinheitlicht."
+        ]
+      ]
+    },
     "1.1.0": {
       "date": "2026-10-14",
       "en": [
@@ -231,7 +270,7 @@
       "install": "Upload the plugin ZIP under Plugins → Add New → Upload Plugin. Activate it and open Settings → Purify Elementor. Administrator permissions (manage_options) are required to change preferences. Missing or unaudited Elementor versions pause cleanup; settings remain accessible.",
       "features": "With Elementor Free, audited Pro-only menu entries and promotional Global Widgets surfaces are hidden. Global colors and fonts remain usable. Pro entry points are retained when Pro is loaded. Direct links open saved Templates, Add New Template, Settings and Element Manager; existing Elementor permissions still apply. With advertising cleanup enabled, audited Angie installation prompts, empty Custom Widget promotions, the Structure upgrade footer and MCP upgrade advertising are hidden. Active Angie tools, populated custom-widget categories and free MCP functions remain available. A compact status shows detected versions and whether cleanup is active, paused or disabled.",
       "limits": "Cleanup targets audited Elementor 4.3.3, 4.3.4 and 4.3.5 structures. Other versions pause cleanup to preserve functional controls. Atomic/V4 and third-party offers are not fully covered. No global suppression of technical, license, security or update notices. Hiding menus does not disconnect Account or MCP. No performance improvement is guaranteed. Pro 4.3.1 and 4.3.2 received source review and protection tests only; full live Pro compatibility is not established. The form workaround is limited to Purify settings with audited Elementor versions; it does not alter other forms or Elementor tracking globally.",
-      "components": "The plugin embeds deckerweb Library 0.9.0 and GitHub Release Updater 2.1.0. Library runtime requires PHP 8.0; compatible runtime election checks requirements before include. Purify retains its PHP 7.4 minimum. Shared Library preferences and optional online discovery are separate from Purify preferences. No automatic updates or telemetry are enabled.",
+      "components": "Bundled deckerweb Library 1.1.0 and deckerweb Updater 2.2.1 use the existing host textdomain and native WordPress update flow. The optional online catalog is off by default; Library preferences are shared between hosts. PHP 8.1 or newer is required. These components are absent from the standalone snippet.",
       "privacy": "Release metadata and chosen update ZIPs are requested from GitHub. Optional Library online discovery requests the deckerweb GitHub raw catalog; installation requires release and package validation. Endpoints see the requesting IP. No site URL, user ID or plugin inventory is submitted by the Library. Public use requires no token.",
       "data": "The eight Purify preferences belong to each website, including in Multisite. Deactivation and uninstall retain them. Uninstall removes the host update cache and invokes the shared Library cleanup contract; another installed host, even inactive, protects shared data. Library settings remain unless its separate deletion option is enabled. Elementor data and installed catalog plugins are retained.",
       "snippet": "The explicitly authorized standalone snippet uses the same cleanup engine. Run it everywhere in a PHP snippet manager and activate only one variant. Home and the entire dashboard widget are hidden by default. It has code configuration instead of a settings page, and includes neither Library nor updater. Its own German fallback works without plugin language files; load timing depends on the manager.",
@@ -267,10 +306,10 @@
         "Kompakter sprachgerechter Header, zugänglicher lokaler Änderungsverlauf und Dokumentationslinks.",
         "Kompatibilitätsstatus und gezielte Bereinigung von MCP-/Angie-Werbung."
       ],
-      "install": "Plugin-ZIP unter Plugins → Neues Plugin hinzufügen → Plugin hochladen installieren. Aktivieren und Einstellungen → Purify Elementor öffnen. Änderungen erfordern Administratorrechte (manage_options). Bei fehlendem oder ungeprüftem Elementor pausiert die Bereinigung; Einstellungen bleiben erreichbar.",
+      "install": "Plugin-ZIP unter Plugins → Neues Plugin hinzufügen → Plugin hochladen installieren. Aktivieren und Einstellungen → Purify Elementor öffnen. Änderungen erfordern Administratorrechte (manage_options). Bei fehlendem oder ungeprüftem Elementor pausiert die Bereinigung; Einstellungen bleiben sichtbar; abhängige Änderungen sind während der Pause nicht möglich.",
       "features": "Mit Elementor Free werden geprüfte Pro-Menüeinträge und globale Widget-Werbung ausgeblendet. Globale Farben und Schriften bleiben nutzbar. Bei geladenem Pro bleiben Pro-Einstiege erhalten. Direkte Links öffnen gespeicherte Templates, ein neues Template, Einstellungen und Element-Manager; die Elementor-Berechtigungen gelten weiterhin. Bei aktivierter Werbebereinigung werden geprüfte Angie-Installationshinweise, leere Custom-Widget-Werbung, der Struktur-Upgrade-Footer und MCP-Upgrade-Werbung ausgeblendet. Aktive Angie-Werkzeuge, befüllte Custom-Widget-Kategorien und kostenlose MCP-Funktionen bleiben verfügbar. Ein kompakter Status zeigt erkannte Versionen und aktive, pausierte oder ausgeschaltete Bereinigung.",
       "limits": "Die Bereinigung gilt für geprüfte Elementor-Strukturen aus Version 4.3.3, 4.3.4 und 4.3.5. Bei anderen Versionen pausiert sie zum Schutz funktionaler Bedienelemente. Atomic/V4 und Drittanbieterangebote sind nicht vollständig abgedeckt. Technische, Lizenz-, Sicherheits- und Updatehinweise werden nicht pauschal unterdrückt. Verborgene Menüs trennen keine Konto-/MCP-Verbindung. Kein zugesicherter Performancegewinn. Pro 4.3.1 und 4.3.2 wurden ausschließlich anhand der Quellen und Schutzlogik geprüft; vollständige Live-Pro-Kompatibilität ist damit nicht belegt. Der Formular-Workaround gilt nur auf der Purify-Einstellungsseite mit geprüften Elementor-Versionen; andere Formulare und Elementors globales Tracking bleiben unverändert.",
-      "components": "Das Plugin enthält deckerweb Library 0.9.0 und GitHub Release Updater 2.1.0. Die Library-Laufzeit benötigt PHP 8.0; ihre kompatible Laufzeitwahl prüft Voraussetzungen vor dem Laden. Purify behält PHP 7.4 als Mindestversion. Gemeinsame Library-Einstellungen und optionale Onlineabfragen sind unabhängig von Purify. Keine automatisch aktivierten Updates oder Telemetrie.",
+      "components": "Gebündelte deckerweb Library 1.1.0 und deckerweb Updater 2.2.1 nutzen die vorhandene Host-Textdomain und den nativen WordPress-Updateablauf. Der optionale Online-Katalog ist standardmäßig ausgeschaltet; Library-Einstellungen werden zwischen Hosts geteilt. Mindestens PHP 8.1 ist erforderlich. Das eigenständige Snippet enthält diese Komponenten nicht.",
       "privacy": "Release-Metadaten und ausgewählte Update-ZIPs werden bei GitHub abgefragt. Die optionale Library-Onlineabfrage nutzt den deckerweb-GitHub-Raw-Katalog; Installationen prüfen Release und Paket. Die Endpunkte sehen die anfragende IP-Adresse. Die Library überträgt keine Website-URL, Nutzer-ID oder Pluginliste. Öffentliche Nutzung benötigt keinen Token.",
       "data": "Die acht Purify-Einstellungen gelten je Website, auch in Multisite. Deaktivierung und Deinstallation erhalten sie. Deinstallation entfernt den Host-Updatecache und ruft die gemeinsame Library-Bereinigung auf; andere installierte Hosts schützen gemeinsame Daten auch bei Deaktivierung. Library-Einstellungen bleiben ohne ihre separate Löschoption erhalten. Elementor-Daten und über den Katalog installierte Plugins bleiben erhalten.",
       "snippet": "Das ausdrücklich freigegebene eigenständige Snippet nutzt dieselbe Bereinigungsengine. Im PHP-Snippet-Manager überall ausführen und nur eine Variante aktivieren. Home und das gesamte Dashboard-Widget sind standardmäßig verborgen. Konfiguration erfolgt im Code statt auf einer Einstellungsseite; Library und Updater fehlen. Sein deutscher Fallback funktioniert ohne Plugin-Sprachdateien; die Ladezeit hängt vom Manager ab.",
@@ -298,5 +337,8 @@
       ]
     }
   },
-  "version": "1.1.0"
+  "version": "1.1.1",
+  "requires_php": "8.1",
+  "requires_wp": "6.7",
+  "tested_wp": "7.1.3"
 }

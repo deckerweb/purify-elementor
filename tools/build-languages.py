@@ -17,3 +17,9 @@ for locale in ['de_DE','de_DE_formal']:
  (langs/f'purify-elementor-{locale}.po').write_text('\n\n'.join('msgid '+quote(en)+'\nmsgstr '+quote(de) for en,de in sorted(entries.items()))+'\n')
  (langs/f'purify-elementor-{locale}.mo').write_bytes(mo(entries))
 (langs/'purify-elementor.pot').write_text('msgid ""\nmsgstr "Content-Type: text/plain; charset=UTF-8\\n"\n\n'+'\n\n'.join('msgid '+quote(en)+'\nmsgstr ""' for en in sorted(messages))+'\n')
+
+# Literal host calls keep Plugin Check and translation extraction deterministic.
+import re
+keys=sorted({x.replace("\\'", "'") for x in re.findall(r"self::text\( '((?:[^'\\]|\\.)*)'",(r/'includes/core.php').read_text())})
+def phpquote(value):return "'"+value.replace('\\','\\\\').replace("'","\\'")+"'"
+(r/'includes/host-translations.php').write_text("<?php\n/** Literal translations for Purify Elementor; generated from its core source messages. */\ndefined( 'ABSPATH' ) || exit;\n/**\n * Translate a known host message in the active WordPress locale.\n * @param string $message English source text.\n * @return string Localized message or unchanged unknown text.\n */\nfunction purify_elementor_host_text( $message ) {\n    ddw_pe_load_translations();\n    switch ( $message ) {\n"+''.join('        case '+phpquote(key)+':\n            return __( '+phpquote(key)+", 'purify-elementor' );\n" for key in keys)+"        default: return $message;\n    }\n}\n")

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 if ( ! class_exists( 'DDW_Purify_Elementor', false ) ) {
 final /** Coordinate targeted Elementor cleanup and per-site preferences. */
 class DDW_Purify_Elementor {
-    const VERSION = '1.1.0';
+    const VERSION = '1.1.1';
     /** @var string[] Free versions with audited cleanup integration points. */
     const AUDITED_ELEMENTOR_VERSIONS = array( '4.3.3', '4.3.4', '4.3.5' );
     const OPTION = 'ddw_purify_elementor';
@@ -84,14 +84,21 @@ class DDW_Purify_Elementor {
      */
     private function active() { return defined( 'ELEMENTOR_VERSION' ) && in_array( ELEMENTOR_VERSION, self::AUDITED_ELEMENTOR_VERSIONS, true ); }
     /**
+     * Resolve the active WordPress interface locale, including temporary locale switches.
+     * @return string Active locale; user preference is the standalone fallback.
+     */
+    public static function locale() {
+        return function_exists( 'determine_locale' ) ? determine_locale() : get_user_locale();
+    }
+    /**
      * Translate an English host message using its textdomain.
      * @param string $en English source message.
      * @param string $de German fallback for standalone snippets.
      * @return string Result of this operation.
      */
     public static function text( $en, $de ) {
-        if ( function_exists( '__' ) && ! ( isset( $GLOBALS['ddw_purify_elementor_instance'] ) && $GLOBALS['ddw_purify_elementor_instance']->snippet ) ) { return __( $en, 'purify-elementor' ); }
-        return 0 === strpos( get_user_locale(), 'de' ) ? $de : $en;
+        if ( function_exists( '__' ) && ! ( isset( $GLOBALS['ddw_purify_elementor_instance'] ) && $GLOBALS['ddw_purify_elementor_instance']->snippet ) ) { return function_exists( 'purify_elementor_host_text' ) ? purify_elementor_host_text( $en ) : ( 0 === strpos( self::locale(), 'de' ) ? $de : $en ); }
+        return 0 === strpos( self::locale(), 'de' ) ? $de : $en;
     }
     /**
      * Remove only audited promotional callbacks; preserve technical notices.
@@ -159,7 +166,7 @@ class DDW_Purify_Elementor {
     public static function menu_slug( $value ) {
         if ( ! is_string( $value ) ) { return ''; }
         $url = html_entity_decode( $value, ENT_QUOTES, 'UTF-8' );
-        $query = parse_url( $url, PHP_URL_QUERY );
+        $query = wp_parse_url( $url, PHP_URL_QUERY );
         if ( is_string( $query ) ) {
             parse_str( $query, $args );
             if ( isset( $args['page'] ) && is_string( $args['page'] ) ) { return $args['page']; }
@@ -443,11 +450,6 @@ JS;
      * @param array $links Existing plugin action links.
      * @return array Links including Settings when manage_options is granted.
      */
-    /**
-     * Provide the settings link host operation.
-     * @param array $links Existing links to preserve.
-     * @return void No return value.
-     */
     public function settings_link( $links ) {
         if ( current_user_can( 'manage_options' ) ) {
             $links = array_merge( array( 'settings' => '<a href="' . esc_url( admin_url( 'options-general.php?page=purify-elementor' ) ) . '">' . esc_html( self::text( 'Settings', 'Einstellungen' ) ) . '</a>' ), $links );
@@ -459,7 +461,19 @@ JS;
      * @return void No return value.
      */
     public function settings() {
-        register_setting( 'ddw_purify_elementor', self::OPTION, array( 'type' => 'array', 'sanitize_callback' => array( __CLASS__, 'sanitize' ), 'default' => self::defaults() ) );
+        register_setting( 'ddw_purify_elementor', self::OPTION, array( 'type' => 'array', 'sanitize_callback' => array( $this, 'sanitize_settings' ), 'default' => self::defaults() ) );
+    }
+    /**
+     * Preserve dependent preferences while cleanup is paused, including direct Settings API posts.
+     * @param mixed $input Submitted website preferences.
+     * @return array Sanitized values or the unchanged stored preferences.
+     */
+    public function sanitize_settings( $input ) {
+        if ( ! $this->active() ) {
+            add_settings_error( self::OPTION, 'ddw_pe_paused', self::text( 'Settings were not changed because a checked Elementor version is not active.', 'Die Einstellungen wurden nicht geändert, weil keine geprüfte Elementor-Version aktiv ist.' ), 'error' );
+            return get_option( self::OPTION, self::defaults() );
+        }
+        return self::sanitize( $input );
     }
     /**
      * Show the shared-updater warning once on this host's settings screen.
@@ -514,20 +528,22 @@ JS;
             'show_account' => self::text( 'Show the Elementor account submenu (also useful with Free)', 'Elementor-Konto-Untermenü anzeigen (auch mit Free nützlich)' ),
             'show_mcp' => self::text( 'Show the Elementor MCP submenu (free basic capabilities)', 'Elementor-MCP-Untermenü anzeigen (kostenlose Grundfunktionen)' ),
         );
-        echo '<div class="wrap ddw-pe-root"><header class="ddw-pe-header"><img class="ddw-pe-icon" src="' . esc_url( plugins_url( 'assets/artwork/icon-' . ( 0 === strpos( get_user_locale(), 'de' ) ? 'de' : 'en' ) . '.svg', DDW_PE_PLUGIN_FILE ) ) . '" alt="" width="64" height="64"><div><h1>Purify Elementor</h1><p>' . esc_html( self::text( 'A calmer Elementor workspace. Existing content and stored Elementor preferences remain intact.', 'Eine ruhigere Elementor-Oberfläche. Vorhandene Inhalte und gespeicherte Elementor-Einstellungen bleiben erhalten.' ) ) . '</p></div></header><hr class="wp-header-end">';
+        echo '<div class="wrap ddw-pe-root"><header class="ddw-pe-header"><img class="ddw-pe-icon" src="' . esc_url( plugins_url( 'assets/artwork/icon-' . ( 0 === strpos( self::locale(), 'de' ) ? 'de' : 'en' ) . '.svg', DDW_PE_PLUGIN_FILE ) ) . '" alt="" width="64" height="64"><div><h1>Purify Elementor</h1><p>' . esc_html( self::text( 'A calmer Elementor workspace. Existing content and stored Elementor preferences remain intact.', 'Eine ruhigere Elementor-Oberfläche. Vorhandene Inhalte und gespeicherte Elementor-Einstellungen bleiben erhalten.' ) ) . '</p></div></header><hr class="wp-header-end">';
         $this->compatibility_status();
         echo '<form id="ddw-pe-settings-form" action="options.php" method="post" data-ddw-pe-tracking-workaround="' . ( $this->active() ? '1' : '0' ) . '">';
         settings_fields( 'ddw_purify_elementor' );
+        echo '<fieldset' . ( $this->active() ? '' : ' disabled' ) . '>';
         foreach ( $labels as $key => $label ) {
             echo '<input type="hidden" name="' . esc_attr( self::OPTION . '[' . $key . ']' ) . '" value="0"><p><label><input type="checkbox" name="' . esc_attr( self::OPTION . '[' . $key . ']' ) . '" value="1" ' . checked( $o[ $key ], true, false ) . '> ' . esc_html( $label ) . '</label></p>';
         }
         echo '<p>' . esc_html( self::text( 'Hiding Account or MCP only removes the admin submenu. Connections and services stay intact.', 'Das Ausblenden von Konto oder MCP entfernt nur das Admin-Untermenü. Verbindungen und Dienste bleiben erhalten.' ) ) . '</p>';
-        submit_button();
+        echo '</fieldset>';
+        submit_button( null, 'primary', 'submit', true, $this->active() ? null : array( 'disabled' => 'disabled' ) );
         echo '</form><p>' . esc_html( self::text( 'Atomic/V4 promotions and third-party offers are only partially covered. Technical, license and error notices remain intact.', 'Atomic-/V4-Werbeflächen und Drittanbieterangebote werden nur teilweise abgedeckt. Technische, Lizenz- und Fehlermeldungen bleiben erhalten.' ) ) . '</p>';
-        echo '<footer class="ddw-pe-footer" aria-label="' . esc_attr( self::text( 'Plugin information', 'Plugininformationen' ) ) . '"><div><strong>Purify Elementor</strong> · ' . esc_html( self::text( 'Version', 'Version' ) ) . ' ' . esc_html( self::VERSION ) . ' · <a href="https://github.com/deckerweb/purify-elementor/blob/main/CHANGELOG.' . ( 0 === strpos( get_user_locale(), 'de' ) ? 'de' : 'en' ) . '.txt" class="button-link" id="ddw-pe-history" aria-controls="ddw-pe-dialog" aria-haspopup="dialog">' . esc_html( self::text( 'Changelog', 'Änderungsverlauf' ) ) . '</a> · <a href="https://github.com/deckerweb/purify-elementor/blob/main/' . ( 0 === strpos( get_user_locale(), 'de' ) ? 'README.de.md' : 'README.md' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( self::text( 'Documentation', 'Dokumentation' ) ) . '</a><p>' . esc_html( self::text( 'A calmer Elementor workspace.', 'Eine ruhigere Elementor-Oberfläche.' ) ) . '</p></div><div><span>© 2026 <a href="https://github.com/deckerweb" target="_blank" rel="noopener noreferrer">David Decker – DECKERWEB</a></span><a href="https://github.com/deckerweb/purify-elementor" target="_blank" rel="noopener noreferrer">' . esc_html( self::text( 'Plugin website', 'Plugin-Website' ) ) . '</a></div></footer>';
+        echo '<footer class="ddw-pe-footer" aria-label="' . esc_attr( self::text( 'Plugin information', 'Plugininformationen' ) ) . '"><div><strong>Purify Elementor</strong> · ' . esc_html( self::text( 'Version', 'Version' ) ) . ' ' . esc_html( self::VERSION ) . ' · <a href="https://github.com/deckerweb/purify-elementor/blob/main/CHANGELOG.' . ( 0 === strpos( self::locale(), 'de' ) ? 'de' : 'en' ) . '.txt" class="button-link" id="ddw-pe-history" aria-controls="ddw-pe-dialog" aria-haspopup="dialog">' . esc_html( self::text( 'Changelog', 'Änderungsverlauf' ) ) . '</a> · <a href="https://github.com/deckerweb/purify-elementor/blob/main/' . ( 0 === strpos( self::locale(), 'de' ) ? 'README.de.md' : 'README.md' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( self::text( 'Documentation', 'Dokumentation' ) ) . '</a><p>' . esc_html( self::text( 'A calmer Elementor workspace.', 'Eine ruhigere Elementor-Oberfläche.' ) ) . '</p></div><div><span>© 2026 <a href="https://github.com/deckerweb" target="_blank" rel="noopener noreferrer">David Decker – DECKERWEB</a></span><a href="https://github.com/deckerweb/purify-elementor" target="_blank" rel="noopener noreferrer">' . esc_html( self::text( 'Plugin website', 'Plugin-Website' ) ) . '</a></div></footer>';
         // hidden + a scoped rule protect the closed state against global admin styles.
         echo '<dialog hidden id="ddw-pe-dialog" aria-labelledby="ddw-pe-dialog-title"><header class="ddw-pe-dialog-header"><h2 id="ddw-pe-dialog-title">' . esc_html( self::text( 'Changelog', 'Änderungsverlauf' ) ) . '</h2><form method="dialog"><button type="submit" class="button" id="ddw-pe-dialog-close" autofocus>' . esc_html( self::text( 'Close', 'Schließen' ) ) . '</button></form></header>';
-        if ( function_exists( 'ddw_pe_changelog_html' ) ) { echo ddw_pe_changelog_html(); }
+        if ( function_exists( 'ddw_pe_changelog_html' ) ) { echo wp_kses_post( ddw_pe_changelog_html() ); }
         echo '</dialog></div>';
 
     }

@@ -4,7 +4,7 @@
 
 Eine ruhigere Elementor-Oberfläche. Geprüfte Werbung ausblenden und die Navigation vereinfachen; Inhalte und gespeicherte Elementor-Einstellungen bleiben erhalten.
 
-[English](README.md) · Version 1.1.0 · WordPress 6.7+ · PHP 7.4+
+[English](README.md) · Version 1.1.1 · WordPress 6.7+ · PHP 8.1+
 
 [Download](https://github.com/deckerweb/purify-elementor/releases/latest) · [FAQ](docs/FAQ.de.md)
 
@@ -32,7 +32,7 @@ Eine ruhigere Elementor-Oberfläche. Geprüfte Werbung ausblenden und die Naviga
 
 ## Installation
 
-Plugin-ZIP unter Plugins → Neues Plugin hinzufügen → Plugin hochladen installieren. Aktivieren und Einstellungen → Purify Elementor öffnen. Änderungen erfordern Administratorrechte (manage_options). Bei fehlendem oder ungeprüftem Elementor pausiert die Bereinigung; Einstellungen bleiben erreichbar.
+Plugin-ZIP unter Plugins → Neues Plugin hinzufügen → Plugin hochladen installieren. Aktivieren und Einstellungen → Purify Elementor öffnen. Änderungen erfordern Administratorrechte (manage_options). Bei fehlendem oder ungeprüftem Elementor pausiert die Bereinigung; Einstellungen bleiben sichtbar; abhängige Änderungen sind während der Pause nicht möglich.
 
 ## Funktionen
 
@@ -44,7 +44,7 @@ Die Bereinigung gilt für geprüfte Elementor-Strukturen aus Version 4.3.3, 4.3.
 
 ## Komponenten
 
-Das Plugin enthält deckerweb Library 0.9.0 und GitHub Release Updater 2.1.0. Die Library-Laufzeit benötigt PHP 8.0; ihre kompatible Laufzeitwahl prüft Voraussetzungen vor dem Laden. Purify behält PHP 7.4 als Mindestversion. Gemeinsame Library-Einstellungen und optionale Onlineabfragen sind unabhängig von Purify. Keine automatisch aktivierten Updates oder Telemetrie.
+Gebündelte deckerweb Library 1.1.0 und deckerweb Updater 2.2.1 nutzen die vorhandene Host-Textdomain und den nativen WordPress-Updateablauf. Der optionale Online-Katalog ist standardmäßig ausgeschaltet; Library-Einstellungen werden zwischen Hosts geteilt. Mindestens PHP 8.1 ist erforderlich. Das eigenständige Snippet enthält diese Komponenten nicht.
 
 ## Externe Verbindungen
 
@@ -84,6 +84,13 @@ Die Bereinigung ist auf die geprüften Versionen 4.3.3, 4.3.4 und 4.3.5 begrenzt
 
 ## Änderungsverlauf
 
+### 1.1.1 · 21. Oktober 2026
+
+- **Verbessert:** Enthält deckerweb Library 1.1.0 und den fest eingebundenen deckerweb Updater 2.2.1; ein zuvor von einem anderen Plugin geladener älterer Updater bestimmt nicht mehr die verwendete Engine.
+- **Behoben:** Änderungsverlauf, Dokumentationslinks und Grafiken folgen der aktiven WordPress-Oberflächensprache.
+- **Behoben:** Pausierte Bereinigung erhält gespeicherte Einstellungen und lässt Änderungen erst wieder mit einer aktiven geprüften Elementor-Version zu.
+- **Sonstiges:** Benötigt mindestens PHP 8.1; WordPress 6.7 bleibt unterstützt. Wiki-Navigation und zweisprachiger Footer sind vereinheitlicht.
+
 ### 1.1.0 · 14. Oktober 2026
 
 - **Neu:** Kompakter Kompatibilitätsstatus zeigt erkannte Elementor-Versionen und aktive oder pausierte Bereinigung.
@@ -119,11 +126,6 @@ Die Bereinigung ist auf die geprüften Versionen 4.3.3, 4.3.4 und 4.3.5 begrenzt
 ### 0.2.1 · 2. Oktober 2026
 
 - **Behoben:** Home-URLs erkennen und spät registrierte Upgrade-Einträge entfernen.
-
-### 0.2.0 · 2. Oktober 2026
-
-- **Neu:** Separate Einstellungen für Home, Konto, MCP und Dashboard-Widget; eingebettete deckerweb Library.
-- **Behoben:** Zuverlässiges Schließen des Änderungsverlaufs mit Escape und Fokusrückgabe.
 
 ## Autor und Unterstützung
 

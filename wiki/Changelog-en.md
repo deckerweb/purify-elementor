@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1 · October 21, 2026
+
+- **Improved:** Includes deckerweb Library 1.1.0 and the pinned deckerweb Updater 2.2.1; an older updater loaded by another plugin no longer selects the wrong engine.
+- **Fixed:** Changelog, documentation links and artwork follow the active WordPress interface language.
+- **Fixed:** Paused cleanup preserves saved preferences and rejects changes until a checked Elementor version is active.
+- **Misc:** Requires PHP 8.1 or newer; WordPress 6.7 remains supported. Wiki navigation and bilingual footer are consistent.
+
 ## 1.1.0 · October 14, 2026
 
 - **New:** Compact compatibility status shows detected Elementor versions and whether cleanup is active or paused.

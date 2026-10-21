@@ -4,7 +4,7 @@
 
 A calmer Elementor workspace. Hide audited promotions and simplify navigation while keeping content and stored Elementor preferences intact.
 
-[Deutsch](README.de.md) · Version 1.1.0 · WordPress 6.7+ · PHP 7.4+
+[Deutsch](README.de.md) · Version 1.1.1 · WordPress 6.7+ · PHP 8.1+
 
 [Download](https://github.com/deckerweb/purify-elementor/releases/latest) · [FAQ](docs/FAQ.en.md)
 
@@ -44,7 +44,7 @@ Cleanup targets audited Elementor 4.3.3, 4.3.4 and 4.3.5 structures. Other versi
 
 ## Components
 
-The plugin embeds deckerweb Library 0.9.0 and GitHub Release Updater 2.1.0. Library runtime requires PHP 8.0; compatible runtime election checks requirements before include. Purify retains its PHP 7.4 minimum. Shared Library preferences and optional online discovery are separate from Purify preferences. No automatic updates or telemetry are enabled.
+Bundled deckerweb Library 1.1.0 and deckerweb Updater 2.2.1 use the existing host textdomain and native WordPress update flow. The optional online catalog is off by default; Library preferences are shared between hosts. PHP 8.1 or newer is required. These components are absent from the standalone snippet.
 
 ## External connections
 
@@ -84,6 +84,13 @@ Cleanup is limited to audited Elementor 4.3.3, 4.3.4 and 4.3.5. Preferences are 
 
 ## Changelog
 
+### 1.1.1 · October 21, 2026
+
+- **Improved:** Includes deckerweb Library 1.1.0 and the pinned deckerweb Updater 2.2.1; an older updater loaded by another plugin no longer selects the wrong engine.
+- **Fixed:** Changelog, documentation links and artwork follow the active WordPress interface language.
+- **Fixed:** Paused cleanup preserves saved preferences and rejects changes until a checked Elementor version is active.
+- **Misc:** Requires PHP 8.1 or newer; WordPress 6.7 remains supported. Wiki navigation and bilingual footer are consistent.
+
 ### 1.1.0 · October 14, 2026
 
 - **New:** Compact compatibility status shows detected Elementor versions and whether cleanup is active or paused.
@@ -119,11 +126,6 @@ Cleanup is limited to audited Elementor 4.3.3, 4.3.4 and 4.3.5. Preferences are 
 ### 0.2.1 · October 2, 2026
 
 - **Fixed:** Recognize Home URLs and remove late-registered Upgrade entries.
-
-### 0.2.0 · October 2, 2026
-
-- **New:** Independent Home, Account, MCP and dashboard-widget preferences; embedded deckerweb Library.
-- **Fixed:** Reliable changelog close, Escape and focus handling.
 
 ## Author and support
 

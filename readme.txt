@@ -1,8 +1,9 @@
 === Purify Elementor ===
 Contributors: deckerweb
 Requires at least: 6.7
-Requires PHP: 7.4
-Stable tag: 1.1.0
+Requires PHP: 8.1
+Tested up to: 7.1.3
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +33,11 @@ Purify preferences and Elementor data remain. Only temporary host/shared compone
 Cleanup is limited to audited Elementor 4.3.3, 4.3.4 and 4.3.5. Preferences are per site; isolated Multisite checks do not establish full live Pro/network compatibility.
 
 == Changelog ==
+= 1.1.1 · October 21, 2026 =
+* Improved: Includes deckerweb Library 1.1.0 and the pinned deckerweb Updater 2.2.1; an older updater loaded by another plugin no longer selects the wrong engine.
+* Fixed: Changelog, documentation links and artwork follow the active WordPress interface language.
+* Fixed: Paused cleanup preserves saved preferences and rejects changes until a checked Elementor version is active.
+* Misc: Requires PHP 8.1 or newer; WordPress 6.7 remains supported. Wiki navigation and bilingual footer are consistent.
 = 1.1.0 · October 14, 2026 =
 * New: Compact compatibility status shows detected Elementor versions and whether cleanup is active or paused.
 * Improved: Hides audited Angie installation promotions, empty Custom Widget advertising, Structure upsells and MCP upgrade advertising while retaining usable widgets and MCP features.
@@ -56,6 +62,3 @@ Cleanup is limited to audited Elementor 4.3.3, 4.3.4 and 4.3.5. Preferences are 
 * Fixed: Hide the empty Pro category with promotional widgets.
 = 0.2.1 · October 2, 2026 =
 * Fixed: Recognize Home URLs and remove late-registered Upgrade entries.
-= 0.2.0 · October 2, 2026 =
-* New: Independent Home, Account, MCP and dashboard-widget preferences; embedded deckerweb Library.
-* Fixed: Reliable changelog close, Escape and focus handling.

@@ -34,6 +34,9 @@ msgstr "Wird aktiviert…"
 msgid "Active"
 msgstr "Aktiv"
 
+msgid "Active filters: "
+msgstr "Aktive Filter: "
+
 msgid "Admin"
 msgstr "Administration"
 
@@ -54,6 +57,9 @@ msgstr "Bereits aktuell."
 
 msgid "Another action for this plugin is running. Please wait."
 msgstr "Für dieses Plugin läuft bereits eine Aktion. Bitte warten."
+
+msgid "Another component interrupted the request. If Git Updater is active, temporarily deactivate it and retry."
+msgstr "Eine andere Komponente hat die Anfrage unterbrochen. Falls Git Updater aktiv ist, deaktiviere ihn vorübergehend und wiederhole den Vorgang."
 
 msgid "Another updater provides a different release. Refresh updates before continuing."
 msgstr "Ein anderer Updater bietet einen abweichenden Release an. Bitte die Updateinformationen vor dem Fortfahren aktualisieren."
@@ -87,6 +93,12 @@ msgstr "Zurück zu deckerweb"
 
 msgid "Builder"
 msgstr "Builder"
+
+msgid "Bundled catalog"
+msgstr "Mitgelieferter Katalog"
+
+msgid "Cached or bundled catalog"
+msgstr "Gespeicherter oder mitgelieferter Katalog"
 
 msgid "Cannot create temporary file."
 msgstr "Temporäre Datei konnte nicht erstellt werden."
@@ -142,6 +154,12 @@ msgstr "Nur passende Ergänzungen"
 msgid "Content"
 msgstr "Inhalte"
 
+msgid "Copied."
+msgstr "Kopiert."
+
+msgid "Copy diagnostic information"
+msgstr "Diagnoseinformationen kopieren"
+
 msgid "Could not access the update filesystem."
 msgstr "Auf das Dateisystem für das Update konnte nicht zugegriffen werden."
 
@@ -172,8 +190,14 @@ msgstr "Elementor AI über seine Nutzereinstellung zur Laufzeit deaktivieren"
 msgid "Discover more plugins by deckerweb"
 msgstr "Weitere Plugins von deckerweb entdecken"
 
+msgid "Discover randomly"
+msgstr "Zufällig entdecken"
+
 msgid "Dismiss permanently"
 msgstr "Dauerhaft schließen"
+
+msgid "Dismiss this notice"
+msgstr "Diesen Hinweis ausblenden"
 
 msgid "Documentation"
 msgstr "Dokumentation"
@@ -220,6 +244,9 @@ msgstr "Fr"
 msgid "Friday"
 msgstr "Freitag"
 
+msgid "Git Updater is active. If a deckerweb installation or update fails, temporarily deactivate Git Updater and retry. Reactivate it afterwards if other plugins or themes need it. Only leave it disabled when those extensions have another reliable update provider."
+msgstr "Git Updater ist aktiv. Wenn eine deckerweb-Installation oder ein Update fehlschlägt, deaktiviere Git Updater vorübergehend und versuche es erneut. Aktiviere ihn danach wieder, wenn andere Plugins oder Themes ihn benötigen. Lass ihn nur dauerhaft deaktiviert, wenn diese Erweiterungen einen anderen zuverlässigen Updateweg besitzen."
+
 msgid "GitHub Stars"
 msgstr "GitHub-Sterne"
 
@@ -264,6 +291,9 @@ msgstr "Installation fehlgeschlagen."
 
 msgid "Installed"
 msgstr "Installiert"
+
+msgid "Installed · inactive"
+msgstr "Installiert · inaktiv"
 
 msgid "Installed: "
 msgstr "Installiert: "
@@ -331,6 +361,9 @@ msgstr "Ungültige Plattformversion."
 msgid "Invalid plugin series."
 msgstr "Ungültige Plugin-Serie."
 
+msgid "Invalid sort order."
+msgstr "Ungültige Sortierung."
+
 msgid "Invalid star count."
 msgstr "Ungültige Anzahl der GitHub-Sterne."
 
@@ -354,6 +387,9 @@ msgstr "Jun"
 
 msgid "June"
 msgstr "Juni"
+
+msgid "Last successful check: "
+msgstr "Zuletzt erfolgreich geprüft: "
 
 msgid "Library"
 msgstr "Library"
@@ -403,8 +439,17 @@ msgstr "Mehr von deckerweb"
 msgid "Multisite"
 msgstr "Multisite"
 
+msgid "Name A–Z"
+msgstr "Name A–Z"
+
+msgid "Name Z–A"
+msgstr "Name Z–A"
+
 msgid "Network activate"
 msgstr "Netzwerkweit aktivieren"
+
+msgid "Network active"
+msgstr "Netzwerkweit aktiv"
 
 msgid "Network permission denied."
 msgstr "Keine Berechtigung für das Netzwerk."
@@ -464,7 +509,10 @@ msgid "Paused: this Elementor version has not been checked."
 msgstr "Pausiert: Diese Elementor-Version wurde nicht geprüft."
 
 msgid "Permission denied."
-msgstr "Keine Berechtigung."
+msgstr "Zugriff verweigert."
+
+msgid "Permission denied. Reload the page and check your permissions."
+msgstr "Zugriff verweigert. Lade die Seite neu und prüfe deine Berechtigungen."
 
 msgid "Planned: "
 msgstr "Geplant: "
@@ -493,6 +541,12 @@ msgstr "Pro 4.3.1/4.3.2: ausschließlich Quellprüfung und Tests der Schutzlogik
 msgid "Product website"
 msgstr "Produktwebsite"
 
+msgid "Public catalog callbacks require both providers and cannot be used in private mode."
+msgstr "Öffentliche Katalog-Callbacks benötigen beide Anbieter und können nicht im Private-Modus verwendet werden."
+
+msgid "Recently updated"
+msgstr "Zuletzt aktualisiert"
+
 msgid "Refresh catalog"
 msgstr "Katalog aktualisieren"
 
@@ -507,6 +561,9 @@ msgstr "Release in Vorbereitung"
 
 msgid "Release must contain exactly the approved plugin directory."
 msgstr "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten."
+
+msgid "Remove filter: "
+msgstr "Filter entfernen: "
 
 msgid "Repository & documentation"
 msgstr "Repository & Dokumentation"
@@ -525,6 +582,9 @@ msgstr "Benötigt ein WordPress-Multisite-Netzwerk."
 
 msgid "Reset filters"
 msgstr "Filter zurücksetzen"
+
+msgid "Reset view"
+msgstr "Ansicht zurücksetzen"
 
 msgid "Retrieve approved catalog updates online"
 msgstr "Katalogfreigaben online aktualisieren"
@@ -547,6 +607,9 @@ msgstr "Diesen Katalog durchsuchen"
 msgid "See the release on GitHub."
 msgstr "Sieh dir den Release auf GitHub an."
 
+msgid "Select and copy the text."
+msgstr "Text markieren und kopieren."
+
 msgid "Selected by deckerweb · Installed from GitHub releases"
 msgstr "Von deckerweb ausgewählt · Installation aus GitHub-Releases"
 
@@ -561,6 +624,9 @@ msgstr "Einstellungen"
 
 msgid "Settings saved."
 msgstr "Einstellungen gespeichert."
+
+msgid "Settings were not changed because a checked Elementor version is not active."
+msgstr "Die Einstellungen wurden nicht geändert, weil keine geprüfte Elementor-Version aktiv ist."
 
 msgid "Shop"
 msgstr "Shop"
@@ -580,17 +646,29 @@ msgstr "Elementor-Konto-Untermenü anzeigen (auch mit Free nützlich)"
 msgid "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible."
 msgstr "Zeigt Plugins, deren Plattform- und Abhängigkeitsanforderungen auf dieser Website oder im Netzwerk erfüllt sind. Ohne diesen Filter bleiben Plugins mit fehlenden Voraussetzungen sichtbar."
 
+msgid "Shuffle again"
+msgstr "Neu mischen"
+
 msgid "Small plugins. Practical improvements."
 msgstr "Kleine Plugins. Konkrete Verbesserungen."
 
+msgid "Sort by"
+msgstr "Sortieren nach"
+
 msgid "Source: GitHub"
 msgstr "Quelle: GitHub"
+
+msgid "Standard"
+msgstr "Standard"
 
 msgid "Sun"
 msgstr "So"
 
 msgid "Sunday"
 msgstr "Sonntag"
+
+msgid "Technical information"
+msgstr "Technische Informationen"
 
 msgid "The GitHub release could not be downloaded."
 msgstr "Das GitHub-Release konnte nicht heruntergeladen werden."
@@ -602,10 +680,10 @@ msgid "The approved package could not be verified."
 msgstr "Das freigegebene Paket konnte nicht geprüft werden."
 
 msgid "The approved release changed. Refresh updates first."
-msgstr "Das freigegebene Release hat sich geändert. Bitte zuerst die Updates aktualisieren."
+msgstr "Die freigegebene Version hat sich geändert. Suche zuerst erneut nach Updates."
 
 msgid "The approved release could not be verified."
-msgstr "Der freigegebene Release konnte nicht geprüft werden."
+msgstr "Die freigegebene Version konnte nicht geprüft werden."
 
 msgid "The catalog URL is not an allowed first-party HTTPS endpoint."
 msgstr "Die Katalog-URL ist keine erlaubte eigene HTTPS-Quelle."
@@ -658,6 +736,9 @@ msgstr "Die Aktualisierung wurde nicht bestätigt. Du kannst es erneut versuchen
 msgid "The update package does not match this plugin or its requirements."
 msgstr "Das Update-Paket passt nicht zu diesem Plugin oder seinen Voraussetzungen."
 
+msgid "These details contain component versions and catalog status, without credentials or site content."
+msgstr "Diese Angaben enthalten Komponentenversionen und den Katalogstatus, keine Zugangsdaten oder Website-Inhalte."
+
 msgid "This catalog requires a newer Library."
 msgstr "Dieser Katalog benötigt eine neuere Library."
 
@@ -693,6 +774,9 @@ msgstr "Nicht vertrauenswürdige Release-URL."
 
 msgid "Update %1$s to version %2$s or newer."
 msgstr "%1$s bitte auf Version %2$s oder neuer aktualisieren."
+
+msgid "Update available"
+msgstr "Update verfügbar"
 
 msgid "Update failed."
 msgstr "Aktualisierung fehlgeschlagen."

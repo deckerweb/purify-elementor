@@ -1,3 +1,8 @@
+= 1.1.1 · 21. Oktober 2026 =
+* Verbessert: Enthält deckerweb Library 1.1.0 und den fest eingebundenen deckerweb Updater 2.2.1; ein zuvor von einem anderen Plugin geladener älterer Updater bestimmt nicht mehr die verwendete Engine.
+* Behoben: Änderungsverlauf, Dokumentationslinks und Grafiken folgen der aktiven WordPress-Oberflächensprache.
+* Behoben: Pausierte Bereinigung erhält gespeicherte Einstellungen und lässt Änderungen erst wieder mit einer aktiven geprüften Elementor-Version zu.
+* Sonstiges: Benötigt mindestens PHP 8.1; WordPress 6.7 bleibt unterstützt. Wiki-Navigation und zweisprachiger Footer sind vereinheitlicht.
 = 1.1.0 · 14. Oktober 2026 =
 * Neu: Kompakter Kompatibilitätsstatus zeigt erkannte Elementor-Versionen und aktive oder pausierte Bereinigung.
 * Verbessert: Geprüfte Angie-Installationswerbung, leere Custom-Widget-Werbung, Struktur-Upsells und MCP-Upgrade-Werbung werden ausgeblendet; nutzbare Widgets und MCP-Funktionen bleiben erhalten.
@@ -22,6 +27,3 @@
 * Behoben: Leere Pro-Kategorie zusammen mit Werbe-Widgets ausblenden.
 = 0.2.1 · 2. Oktober 2026 =
 * Behoben: Home-URLs erkennen und spät registrierte Upgrade-Einträge entfernen.
-= 0.2.0 · 2. Oktober 2026 =
-* Neu: Separate Einstellungen für Home, Konto, MCP und Dashboard-Widget; eingebettete deckerweb Library.
-* Behoben: Zuverlässiges Schließen des Änderungsverlaufs mit Escape und Fokusrückgabe.
