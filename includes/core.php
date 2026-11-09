@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 if ( ! class_exists( 'DDW_Purify_Elementor', false ) ) {
 final /** Coordinate targeted Elementor cleanup and per-site preferences. */
 class DDW_Purify_Elementor {
-    const VERSION = '1.1.1';
+    const VERSION = '1.1.2';
     /** @var string[] Free versions with audited cleanup integration points. */
     const AUDITED_ELEMENTOR_VERSIONS = array( '4.3.3', '4.3.4', '4.3.5' );
     const OPTION = 'ddw_purify_elementor';

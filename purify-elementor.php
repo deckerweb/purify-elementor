@@ -3,7 +3,7 @@
  * Plugin Name: Purify Elementor
  * Plugin URI: https://github.com/deckerweb/purify-elementor
  * Description: Targeted Elementor advertising cleanup with optional AI, news and locked widget controls.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Requires at least: 6.7
  * Requires PHP: 8.1
  * Author: David Decker – DECKERWEB

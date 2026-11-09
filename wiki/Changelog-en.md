@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2 · November 9, 2026
+
+- **Fixed:** Updated deckerweb Library to 1.3.0 and Updater to 2.4.0: normal updates are independent of the catalog, with bounded downloads and stricter package checks.
+
 ## 1.1.1 · October 21, 2026
 
 - **Improved:** Includes deckerweb Library 1.1.0 and the pinned deckerweb Updater 2.2.1; an older updater loaded by another plugin no longer selects the wrong engine.

@@ -4,7 +4,7 @@
 
 Eine ruhigere Elementor-Oberfläche. Geprüfte Werbung ausblenden und die Navigation vereinfachen; Inhalte und gespeicherte Elementor-Einstellungen bleiben erhalten.
 
-[English](README.md) · Version 1.1.1 · WordPress 6.7+ · PHP 8.1+
+[English](README.md) · Version 1.1.2 · WordPress 6.7+ · PHP 8.1+
 
 [Download](https://github.com/deckerweb/purify-elementor/releases/latest) · [FAQ](docs/FAQ.de.md)
 
@@ -44,7 +44,7 @@ Die Bereinigung gilt für geprüfte Elementor-Strukturen aus Version 4.3.3, 4.3.
 
 ## Komponenten
 
-Gebündelte deckerweb Library 1.1.0 und deckerweb Updater 2.2.1 nutzen die vorhandene Host-Textdomain und den nativen WordPress-Updateablauf. Der optionale Online-Katalog ist standardmäßig ausgeschaltet; Library-Einstellungen werden zwischen Hosts geteilt. Mindestens PHP 8.1 ist erforderlich. Das eigenständige Snippet enthält diese Komponenten nicht.
+Gebündelte deckerweb Library 1.3.0 und deckerweb Updater 2.4.0 nutzen die vorhandene Host-Textdomain und den nativen WordPress-Updateablauf. Der optionale Online-Katalog ist standardmäßig ausgeschaltet; Library-Einstellungen werden zwischen Hosts geteilt. Mindestens PHP 8.1 ist erforderlich. Das eigenständige Snippet enthält diese Komponenten nicht.
 
 ## Externe Verbindungen
 
@@ -84,6 +84,10 @@ Die Bereinigung ist auf die geprüften Versionen 4.3.3, 4.3.4 und 4.3.5 begrenzt
 
 ## Änderungsverlauf
 
+### 1.1.2 · 9. November 2026
+
+- **Behoben:** deckerweb Library auf 1.3.0 und Updater auf 2.4.0 aktualisiert: normale Updates unabhängig vom Katalog, begrenzte Downloads und strengere Paketprüfung.
+
 ### 1.1.1 · 21. Oktober 2026
 
 - **Verbessert:** Enthält deckerweb Library 1.1.0 und den fest eingebundenen deckerweb Updater 2.2.1; ein zuvor von einem anderen Plugin geladener älterer Updater bestimmt nicht mehr die verwendete Engine.
@@ -122,10 +126,6 @@ Die Bereinigung ist auf die geprüften Versionen 4.3.3, 4.3.4 und 4.3.5 begrenzt
 
 - **Neu:** Theme-Builder- und globale Widget-Werbung in Free ausblenden; globale Farben und Schriften erhalten.
 - **Behoben:** Leere Pro-Kategorie zusammen mit Werbe-Widgets ausblenden.
-
-### 0.2.1 · 2. Oktober 2026
-
-- **Behoben:** Home-URLs erkennen und spät registrierte Upgrade-Einträge entfernen.
 
 ## Autor und Unterstützung
 

@@ -4,7 +4,7 @@
 
 A calmer Elementor workspace. Hide audited promotions and simplify navigation while keeping content and stored Elementor preferences intact.
 
-[Deutsch](README.de.md) · Version 1.1.1 · WordPress 6.7+ · PHP 8.1+
+[Deutsch](README.de.md) · Version 1.1.2 · WordPress 6.7+ · PHP 8.1+
 
 [Download](https://github.com/deckerweb/purify-elementor/releases/latest) · [FAQ](docs/FAQ.en.md)
 
@@ -44,7 +44,7 @@ Cleanup targets audited Elementor 4.3.3, 4.3.4 and 4.3.5 structures. Other versi
 
 ## Components
 
-Bundled deckerweb Library 1.1.0 and deckerweb Updater 2.2.1 use the existing host textdomain and native WordPress update flow. The optional online catalog is off by default; Library preferences are shared between hosts. PHP 8.1 or newer is required. These components are absent from the standalone snippet.
+Bundled deckerweb Library 1.3.0 and deckerweb Updater 2.4.0 use the existing host textdomain and native WordPress update flow. The optional online catalog is off by default; Library preferences are shared between hosts. PHP 8.1 or newer is required. These components are absent from the standalone snippet.
 
 ## External connections
 
@@ -84,6 +84,10 @@ Cleanup is limited to audited Elementor 4.3.3, 4.3.4 and 4.3.5. Preferences are 
 
 ## Changelog
 
+### 1.1.2 · November 9, 2026
+
+- **Fixed:** Updated deckerweb Library to 1.3.0 and Updater to 2.4.0: normal updates are independent of the catalog, with bounded downloads and stricter package checks.
+
 ### 1.1.1 · October 21, 2026
 
 - **Improved:** Includes deckerweb Library 1.1.0 and the pinned deckerweb Updater 2.2.1; an older updater loaded by another plugin no longer selects the wrong engine.
@@ -122,10 +126,6 @@ Cleanup is limited to audited Elementor 4.3.3, 4.3.4 and 4.3.5. Preferences are 
 
 - **New:** Hide Theme Builder and Global Widgets promotions in Free; preserve global colors and fonts.
 - **Fixed:** Hide the empty Pro category with promotional widgets.
-
-### 0.2.1 · October 2, 2026
-
-- **Fixed:** Recognize Home URLs and remove late-registered Upgrade entries.
 
 ## Author and support
 

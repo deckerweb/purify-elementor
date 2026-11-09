@@ -2,8 +2,8 @@
 Contributors: deckerweb
 Requires at least: 6.7
 Requires PHP: 8.1
-Tested up to: 7.1.3
-Stable tag: 1.1.1
+Tested up to: 7.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,8 @@ Purify preferences and Elementor data remain. Only temporary host/shared compone
 Cleanup is limited to audited Elementor 4.3.3, 4.3.4 and 4.3.5. Preferences are per site; isolated Multisite checks do not establish full live Pro/network compatibility.
 
 == Changelog ==
+= 1.1.2 · November 9, 2026 =
+* Fixed: Updated deckerweb Library to 1.3.0 and Updater to 2.4.0: normal updates are independent of the catalog, with bounded downloads and stricter package checks.
 = 1.1.1 · October 21, 2026 =
 * Improved: Includes deckerweb Library 1.1.0 and the pinned deckerweb Updater 2.2.1; an older updater loaded by another plugin no longer selects the wrong engine.
 * Fixed: Changelog, documentation links and artwork follow the active WordPress interface language.
@@ -60,5 +62,3 @@ Cleanup is limited to audited Elementor 4.3.3, 4.3.4 and 4.3.5. Preferences are 
 = 0.2.2 · October 2, 2026 =
 * New: Hide Theme Builder and Global Widgets promotions in Free; preserve global colors and fonts.
 * Fixed: Hide the empty Pro category with promotional widgets.
-= 0.2.1 · October 2, 2026 =
-* Fixed: Recognize Home URLs and remove late-registered Upgrade entries.
